@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Art Commission Form</h3>
+    <form action="form.php">
+        <input type="text" placeholder="Enter your name"> <hr>
+        <input type="number" placeholder="Enter your mobile number"><hr>
+        <input type="text" placeholder="Enter your full address"><hr>
+        <input type="number" placeholder="Enter pincode"><hr>
+        Enter Medium :
+        <label for="sectionida">
+            <input type="checkbox" value="section a" name="section" id="sectionida"> Acrylic
+        </label>
+        <label for="sectionidb">
+            <input type="checkbox" value="section b" name="section" id="sectionidb"> Watercolor
+        <hr>
+        Enter Dimension of Canvas :
+        <label for="sectionida">
+            <input type="checkbox" value="section a" name="section" id="sectionida"> 4x6
+        </label>
+        <label for="sectionidb">
+            <input type="checkbox" value="section a" name="section" id="sectionida"> 5x8
+        </label>
+        <label for="sectionidc">
+            <input type="checkbox" value="section b" name="section" id="sectionidb"> 8x10
+        <hr>
+        <input type="text" placeholder="Enter deadline(if any)"> <hr>
+        <textarea name="Other Specifications of your order" id="explain" cols="30" rows="10" placeholder="explain other details, such as what idea you want to convey, any reference, color scheme etc"></textarea><hr>
+        <label> Choose the Reference File(s) to upload: </label>
+             <input type="file" id="myFile" multiple/> 
+     
+            <input type="submit" value="submit" />
+
+    </form>
+    <p></p>
+    Note : Generally without deadline, we supply 1 art-piece a month from ordering, but in case of a stricter deadline, we will contact you further for possible change of price. <br> 
+    For multiple orders, we order in 'x no of months'.
+</body>
+</html>
