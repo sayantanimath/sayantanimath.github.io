@@ -1,0 +1,16 @@
+---
+layout: default
+title: Contact
+---
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="cloud">
+        <h1>Contact Me!</h1>
+        <p>Office: 221 Parker Hall, Auburn University</p>
+        <p>Email: sayantani2718@gmail.com </p>
+    </div>
+    <br>
+
+</body>
+</html>
