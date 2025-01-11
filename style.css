@@ -23,8 +23,12 @@ footer {
     /* height: 128px; Maintain aspect ratio */
     height: 90%; /* Default size: 90% of the header height */
 }
-@media (max-width: 700px) {
-  .favicon {
+
+@media only screen and (max-width: 1024px) 
+#title-area{
+    background:none;
+}
+{.favicon {
     position: absolute;
     top: 10px;
     left: 10px;
