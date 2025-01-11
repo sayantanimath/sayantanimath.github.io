@@ -1,0 +1,15 @@
+---
+layout: default
+title: Photography
+---
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="cloud">
+        <h1>Welome Reader!</h1>
+        <p>This is my photo gallery. </p>
+    </div>
+    <br>
+
+</body>
+</html>
