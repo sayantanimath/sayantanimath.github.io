@@ -1,17 +1,12 @@
----
-layout: default
-title: Sayantani Bhattacharya - Mathematics
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+        <title>{{ page.title }}</title>
     <link rel="icon" href="MyFavicon.ico?" type="image/x-icon">
     <link rel="shortcut icon" href="MyFavicon.ico?" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     
     <script>
     	MathJax = {
@@ -29,30 +24,65 @@ title: Sayantani Bhattacharya - Mathematics
     </script>
 </head>
 <body>
-    <h1 align="center" style="font-family:cursive; color:brown">Sayantani Bhattacharya</h1>
-    <h2 align="center" style="font-family:cursive; color:maroon">Welcome to my Space!</h2>
+    <header>
+	<a href="/index.html" align="left"> <!-- Anchor tag wrapping the favicon -->
+		<img src="MyFavicon.ico?" alt="Favicon" class="favicon">
+    	</a>
+        <h1>Sayantani Bhattacharya</h1>
+        <p>Mathematics PhD Student</p>
+    </header>
+  <nav>
+	<ul>
+		<li><a href="/index.html"><div class="navcloud">Home</div></a></li>
+		<li><a href="/pages/about.html"> <div class="navcloud">About Me</div></a></li>
+    <li><a href="/pages/mathematics.html"> <div class="navcloud">Mathematics</div></a></li>
+    <li><a href="/pages/travel.html"><div class="navcloud">s Tours and Travel </div></a></li>
+    <li><a href="/pages/contact.html">Contact</a></li>
+<!--<li><a href="/pages/cv.html">CV</a></li>-->
+    <li><a href="/pages/teaching.html"><div class="navcloud">Teaching</div></a></li>
+    <li><a href="/pages/research.html"><div class="navcloud">Research</div></a></li>
+    <li><a href="/pages/projects.html"><div class="navcloud">Projects</div></a></li>
+    <li><a href="/pages/blog.html">Blog</a></li>
+<!--<li><a href="/pages/publications.html">Publications</a></li>-->
+<!--<li><a href="/pages/resources.html"><div class="navcloud">Resources</div></a></li>-->
+    <li><a href="/pages/gallery.html"><div class="navcloud">Gallery</div></a></li>
+</ul>
+</nav>
 
-    
-
-     
-    <a href="/pages/about.html">About Me</a>
-    <span style="margin-left:5em;">
-        <!-- example of relative link -->
-        <a href="/pages/math.html">Mathematics</a>
-       </span>
-    
-
-     <div class ="img-with-text">
-     <img src="https://www.lifesavvy.com/p/uploads/2020/08/ef8917bb.jpg" width="1300" 
-     height="800" alt="book and coffee">
-     <p align="center" style="font-family:cursive; color:brown" class="bottom-two"> Education is not preparation for life, education is life itself. ~ John Dewey</p>
+    <div class="content">
+        {{ content }}
     </div>
 
+  <footer>
+        <table>
+            <colgroup>
+                <col style="width: 40%;">
+                <col style="width: 20%;">
+                <col style="width: 40%;">
+            </colgroup>
+            <tr>
+                <td>
+                    <ul class="list-inline social">
+                        <li>
+                            <a title="Linkedin" href="www.linkedin.com/in/sayantani-bhattacharya-aa0437118" target="_blank" aria-label="Sayantani Bhattacharya Linkedin">
+                                <svg class="icon" viewBox="0 0 24 24" width="64" height="64">
+                                    <path fill="#ffffff" d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </td>
+                <td align="center">
+                    
+                </td>
+                <td></td>
+            </tr>
+        </table>
 
-    <p><b>Important news!</b></p>
-    <hr>
-    <i>Are you ready?</i>
-    <hr> 
-    <u>Big offer till Dec 31<sup>st</sup>, midnight!</u>
+	
+</footer>
+
 </body>
 </html>
+
+  
