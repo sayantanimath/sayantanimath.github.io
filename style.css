@@ -164,7 +164,7 @@ nav ul li a:hover {
 
 .list-inline.social li {
     display: inline-block;
-    margin-right: auto; /* Adjust as needed */
+    margin-right: 10px; /* Adjust as needed */
 }
 
 .list-inline.social li:last-child {
