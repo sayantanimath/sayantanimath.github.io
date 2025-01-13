@@ -2,7 +2,7 @@ body {
     font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
     margin: 0;
     padding: 0;
-    background-color: #fffff0;
+    background-color: #CFC4CB;
 }
 
 .topnav {
@@ -29,7 +29,15 @@ body {
   color: white;
 }
 
-header,
+header {
+    position: relative; /* Ensure positioning context */
+    background-color: #40162F;
+    color: #fff;
+    padding: 30px 40px;
+    text-align: center;
+    height:auto;
+}
+
 footer {
     position: relative; /* Ensure positioning context */
     background: linear-gradient(to bottom, #40162F, #876D7B);
@@ -63,7 +71,7 @@ footer {
 nav {
     position: relative; /* Ensure positioning context */
     height:5%;
-    background-color: #324016;
+    background-color: #876D7B;
     padding: 10px;
     text-align: center;
 }
