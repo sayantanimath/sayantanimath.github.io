@@ -131,7 +131,7 @@
             </td>
 
 		
-            <td align="center" class="contact-info">
+            <td class="contact-info">
 		    <p><strong>Email:</strong></p> <p><a href="mailto:youremail@example.com">szb0261@auburn.edu</a></p>
                 <p><strong>Mailing Address:</strong></p><p> Department of Mathematics and Statistics</p>
 		    <p>221 Parker Hall </p> <p>Auburn University, AL 36849</p> <p>USA</p>
@@ -161,8 +161,7 @@ function generateRandomMatrix() {
         Array.from({ length: 3 }, () => Math.floor(Math.random() * 2)) // Binary values (0 or 1)
     );
 
-    matrixElement.innerHTML = matrix.map(row => 
-        row.map(cell => `<div>${cell}</div>`).join('')
+    matrixElement.innerHTML = matrix.map(row => `<div>${row.join(' ')}</div>`).join('')
     ).join('');
 }
 
