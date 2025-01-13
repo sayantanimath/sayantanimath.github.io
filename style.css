@@ -49,10 +49,6 @@ footer {
     height:auto;
 }
 
-#social {
-  margin-left: auto;
-}
-
 .favicon {
     position: absolute;
     top: 10px;
@@ -168,7 +164,7 @@ nav ul li a:hover {
 
 .list-inline.social li {
     display: inline-block;
-    margin-right: 10px; /* Adjust as needed */
+    margin-right: auto; /* Adjust as needed */
 }
 
 .list-inline.social li:last-child {
