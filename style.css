@@ -68,12 +68,9 @@ footer {
   }
 }
 
-@media screen and (max-width:767px) {
-div#page-section-5f4d0099af5488518060abea .span-12 .span-4 {
-    width: 33.33% !important;
-    float: left !important;
-}
-}
+@media only screen and (max-width:650px){.Footer-inner { 
+  padding: 65px;
+  }}
 
 nav {
     position: relative; /* Ensure positioning context */
