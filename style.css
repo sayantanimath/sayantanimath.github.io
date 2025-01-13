@@ -122,7 +122,7 @@ nav ul li a:hover {
     height: auto + 10px;
     padding: 10px; /* Adjust padding as needed */
     border-radius: 25%; /* Makes it round */
-    background-color: #111; /* Matches the nav background */
+    background-color: #291420; /* Matches the nav background */
     display: inline-block; /* Allows it to wrap around content */
 }
 
