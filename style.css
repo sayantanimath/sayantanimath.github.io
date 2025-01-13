@@ -43,8 +43,14 @@ footer {
     background: linear-gradient(to bottom, #40162F, #876D7B);
     color: #fff;
     padding: 30px 40px;
+    display: flex;
+    align-items: center;
     text-align: center;
     height:auto;
+}
+
+#social {
+  margin-left: auto;
 }
 
 .favicon {
@@ -67,10 +73,6 @@ footer {
       background-color: #AAAAFF; /* Change background color to verify media query */
   }
 }
-
-@media only screen and (max-width:650px){.Footer-inner { 
-  padding: 65px;
-  }}
 
 nav {
     position: relative; /* Ensure positioning context */
