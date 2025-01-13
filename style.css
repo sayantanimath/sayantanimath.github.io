@@ -31,12 +31,15 @@ body {
 
 header {
     position: relative; /* Ensure positioning context */
-    background-color: #40162F;
-    color: #fff;
+    /*background-color: #40162F;
+    color: #fff;--> */
+    background: linear-gradient(to bottom, #40162F, #876D7B);
+    color: white;
     padding: 30px 40px;
     text-align: center;
     height:auto;
 }
+
 
 footer {
     position: relative; /* Ensure positioning context */
@@ -71,7 +74,9 @@ footer {
 nav {
     position: relative; /* Ensure positioning context */
     height:5%;
-    background-color: #876D7B;
+    /*background-color: #876D7B; */
+    background: linear-gradient(to bottom, #876D7B, #D3C5CC);
+    color: white;
     padding: 10px;
     text-align: center;
 }
@@ -90,12 +95,18 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    /*color: #fff; */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #fff;
 }
+
 
 .content {
     padding: 20px;
