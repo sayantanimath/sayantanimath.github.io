@@ -68,6 +68,13 @@ footer {
   }
 }
 
+@media screen and (max-width:767px) {
+div#page-section-5f4d0099af5488518060abea .span-12 .span-4 {
+    width: 33.33% !important;
+    float: left !important;
+}
+}
+
 nav {
     position: relative; /* Ensure positioning context */
     height:5%;
