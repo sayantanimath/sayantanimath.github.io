@@ -32,7 +32,7 @@ body {
 header,
 footer {
     position: relative; /* Ensure positioning context */
-    background-color: #333;
+    background-color: #40162F;
     color: #fff;
     padding: 30px 40px;
     text-align: center;
@@ -120,7 +120,7 @@ nav ul li a:hover {
 
 .navcloud:hover {
     background-color: #fff; /* Invert background color */
-    color: #111; /* Invert text color */
+    color: #E91C9A; /* Invert text color */
     width: fit-content+10px; /* Ensures it wraps around the content */
     height: auto + 10px;
     padding: 10px; /* Adjust padding as needed */
