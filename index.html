@@ -95,9 +95,9 @@
 	<footer>
     <table>
         <colgroup>
-            <col style="width: 40%;">
-            <col style="width: 20%;">
-            <col style="width: 40%;">
+            <col style="width: 50%;">
+            <col style="width: 50%;">
+            <!--<col style="width: 40%;">-->
         </colgroup>
         <tr>
             <td>
@@ -147,13 +147,33 @@ function updateClock() {
     clockElement.textContent = now.toLocaleTimeString('en-US', options);
 }
 
-function generateRandomMatrix() {
+   // function generateRandomMatrix() {
+   // const matrixElement = document.getElementById('random-matrix');
+   // const matrix = Array.from({ length: 3 }, () => 
+     //   Array.from({ length: 3 }, () => Math.floor(Math.random() * 2))
+    // );
+
+   // matrixElement.innerHTML = matrix.map(row => `<div>${row.join(' ')}</div>`).join('');
+// }
+
+    function generateRandomMatrix() {
     const matrixElement = document.getElementById('random-matrix');
     const matrix = Array.from({ length: 3 }, () => 
-        Array.from({ length: 3 }, () => Math.floor(Math.random() * 2))
+        Array.from({ length: 3 }, () => Math.floor(Math.random() * 2)) // Binary values (0 or 1)
     );
 
-    matrixElement.innerHTML = matrix.map(row => `<div>${row.join(' ')}</div>`).join('');
+    // Create the matrix table with borders
+    let tableHTML = '<table style="border-collapse: collapse; width: 100px; height: 100px; text-align: center;">';
+    matrix.forEach(row => {
+        tableHTML += '<tr>';
+        row.forEach(cell => {
+            tableHTML += `<td style="border: 1px solid black; font-size: 18px;">${cell}</td>`;
+        });
+        tableHTML += '</tr>';
+    });
+    tableHTML += '</table>';
+
+    matrixElement.innerHTML = tableHTML;
 }
 
 // Initial function calls
