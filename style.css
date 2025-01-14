@@ -31,7 +31,7 @@ body {
 
 /* Blog Post Styles */
 .blog-post {
-    background: white;
+    background: #CFC4CB;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin: 20px auto; /* Center-align in mobile view */
