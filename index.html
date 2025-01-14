@@ -135,6 +135,8 @@
 <!-- Include the following scripts at the end of your body section -->
 <script>
 function updateClock() {
+    const clockElement = document.getElementById('world-clock');
+    const now = new Date();
     const options = {
         timeZone: 'America/Chicago', // CDT
         hour: '2-digit',
@@ -142,10 +144,8 @@ function updateClock() {
         second: '2-digit',
         hour12: false
     };
-    const clockElement = document.getElementById('world-clock');
-    const now = new Date();
     const timeInCDT = now.toLocaleTimeString('en-US', options);
-    clockElement.textContent = 'CDT ${timeInCDT}';
+    clockElement.textContent = `CDT ${timeInCDT}`;
 }
 
    // function generateRandomMatrix() {
@@ -181,6 +181,7 @@ function updateClock() {
 updateClock();
 generateRandomMatrix();
 setInterval(updateClock, 1000); // Update clock every second
+
 </script>
 </body>
 </html>
