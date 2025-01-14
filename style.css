@@ -34,7 +34,7 @@ body {
     background: #CFC4CB;
     border: 1px solid #ccc;
     border-radius: 10px;
-    margin: 20px auto; /* Center-align in mobile view */
+    margin: 20px 10px; /* Center-align in mobile view */
     padding: 20px;
     width: calc(45% - 40px); /* Default for desktop: 45% width */
     float: left; /* Float for side-by-side layout */
