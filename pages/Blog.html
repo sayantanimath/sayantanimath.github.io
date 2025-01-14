@@ -1,59 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Navigation Menu Styles */
+        .topnav {
+            background-color: #65A2E6;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .topnav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .topnav a:hover {
+            background-color: #4a8cbf;
+        }
+
+        /* Blog Post Styles */
+        .blog-post {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            width: calc(45% - 40px); /* Adjust width */
+            float: left; /* Float for side-by-side layout */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Clearfix for Floating Elements */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* List Styles */
+        ul {
+            padding-left: 20px; /* Indent list items */
+        }
+    </style>
 </head>
 <body>
-​
-<div class="topnav">
-     <a href="/pages/Art.html"><div class="navcloud">Art</div></a>
-     <a href="/pages/Photography.html"><div class="navcloud">Photography</div></a>
-</div>
-​
-  <pre>
-Solo Travel Wisdom : This table below will give you a brief idea of the taxi fares in and around Shillong (2019):
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <a href="https://sayantani-bhattacharya-math.github.io">Home</a>
+        <a href="/pages/Art.html">Art</a>
+        <a href="/pages/Photography.html">Photography</a>
+    </div>
 
-Shillong sightseeing
-Full day: 2000 INR
+    <!-- Body Content -->
+    <div class="clearfix">
+        <div class="blog-post">
+            <h2>Solo Travel Wisdom</h2>
+            <p>This table below will give you a brief idea of the taxi fares in and around Shillong (2019):</p>
+            <table>
+                <tr>
+                    <td><strong>Shillong sightseeing</strong></td>
+                    <td>Full day: 2000 INR</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Half Day: 1300 INR</td>
+                </tr>
+                <tr>
+                    <td><strong>Shillong to Mawlylong</strong></td>
+                    <td>Both ways: 3000 INR</td>
+                </tr>
+                <tr>
+                    <td><strong>Shillong to Cherrapunjee</strong></td>
+                    <td>One way: 2000 INR</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Whole day package: 2500 INR</td>
+                </tr>
+            </table>
+            <p>On average, a Shillong trip for 4 days (from Guwahati) will cost you around 8000-10000 INR. You can cut down on the costs if you travel in a group.</p>
+        </div>
 
-Half Day: 1300 INR
-
-Shillong to Mawlylong
-Both ways:  3000 INR
-
-Shillong to Cherrapunjee
-one way: 2000 INR
-
-whole day package: 2500 INR
-
-How much will a 4-day trip to Shillong cost?
-On average, a Shillong trip for 4 days (from Guwahati) will cost you around 8000-10000 INR.
-I have given a breakdown of my costs above. Also, as I said, you can cut down on the costs if you travel in a group.
-    </pre>
-
-
-    <br>
-    <pre>
-    <li>Animanga Favorites
-        <ul>
-            <li>One Piece</li>
-            <li>Hunter x Hunter</li>
-            <li>Vinland Saga</li>
-            <li>Gintama</li>
-            <li>Neon Genesis Evangelion</li>
-            <li>Jojo's Bizzare Adventures</li>
-            <li>Mob Psycho 100</li>
-            <li>Attack on Titan</li>
-            <li>Fullmetal Alchemist : Brotherhood</li>
-            <li>Banana Fish</li>
-        </ul>    
-    </li>
-        
-    </pre>
-​
+        <div class="blog-post">
+            <h2>Animanga Favorites</h2>
+            <ul>
+                <li>One Piece</li>
+                <li>Hunter x Hunter</li>
+                <li>Vinland Saga</li>
+                <li>Gintama</li>
+                <li>Neon Genesis Evangelion</li>
+                <li>Jojo's Bizarre Adventures</li>
+                <li>Mob Psycho 100</li>
+                <li>Attack on Titan</li>
+                <li>Fullmetal Alchemist: Brotherhood</li>
+                <li>Banana Fish</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
-
