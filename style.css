@@ -132,8 +132,8 @@ nav ul li a:hover {
     width: fit-content+10px; /* Ensures it wraps around the content */
     height: auto + 10px;
     padding: 10px; /* Adjust padding as needed */
-    border-radius: 25%; /* Makes it round */
-    background-color: #291420; /* Matches the nav background */
+    border-radius: 25%; /*Makes it round */
+    background-color: #40162F; /* Matches the nav background */
     display: inline-block; /* Allows it to wrap around content */
 }
 
