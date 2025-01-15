@@ -36,7 +36,7 @@ body {
     border-radius: 10px;
     margin: 20px 20px; /* Center-align in mobile view */
     padding: 20px;
-    width: calc(45% - 40px); /* Default for desktop: 45% width */
+    width: calc(100% - 40px); /* Default for desktop: 45% width */
     float: left; /* Float for side-by-side layout */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
