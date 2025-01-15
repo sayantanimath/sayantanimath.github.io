@@ -63,7 +63,7 @@ header {
 
 footer {
     position: relative; /* Ensure positioning context */
-    background: linear-gradient(to bottom, #40162F, #876D7B);
+    background: linear-gradient(to top, #40162F, #876D7B);
     color: #fff;
     padding: 30px 40px;
     text-align: center;
@@ -103,7 +103,7 @@ nav {
     /*background-color: #876D7B; */
     background: linear-gradient(to bottom, #876D7B, #D3C5CC);
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
