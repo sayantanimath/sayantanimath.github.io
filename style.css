@@ -34,7 +34,7 @@ body {
     background: #CFC4CB;
     border: 1px solid #ccc;
     border-radius: 10px;
-    margin: 20px 10px; /* Center-align in mobile view */
+    margin: 20px 20px; /* Center-align in mobile view */
     padding: 20px;
     width: calc(45% - 40px); /* Default for desktop: 45% width */
     float: left; /* Float for side-by-side layout */
@@ -92,7 +92,7 @@ footer {
     .blog-post {
         width: 100%; /* Full width on mobile */
         float: none; /* Remove float for vertical stacking */
-        margin: 10px 0; /* Adjust margin for mobile spacing */
+        margin: 10px 10px; /* Adjust margin for mobile spacing */
         padding: 15px; /* Adjust padding for smaller screens */
     }
 }
