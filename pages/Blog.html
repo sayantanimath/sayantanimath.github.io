@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #8C7482; /* Background color for the page */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         /* Navigation Menu Styles */
@@ -20,6 +21,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%; /* Ensure the nav bar spans full width */
+            box-sizing: border-box; /* Include padding in width */
         }
 
         .topnav a {
@@ -40,15 +43,14 @@
             background: #CFC4CB;
             border: 1px solid #ccc;
             border-radius: 10px;
-            margin: 20px;
-            margin-right: 15px;
+            margin: 20px; /* Margin to create space around posts */
             padding: 20px;
             justify-content: center;
             align-items: center;
-            width: calc(40% - 40px); /* Default for desktop: 45% width */
-            /*text-align: justify;*/
+            width: calc(40% - 40px); /* Default for desktop: 40% width */
             float: left; /* Float for side-by-side layout */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Include padding in width */
         }
 
         /* Clearfix for Floating Elements */
@@ -63,9 +65,8 @@
             .blog-post {
                 width: 100%; /* Full width on mobile */
                 float: none; /* Remove float for vertical stacking */
-                margin: 10px 0px;
-                padding: 15px;
-                overflow-x: hidden;
+                margin: 10px 0px; /* Margin between posts */
+                padding: 15px; /* Adjust padding */
             }
         }
     </style>
