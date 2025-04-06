@@ -222,8 +222,8 @@ ul li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 40px 5%;
-  background-color: #cfc4cb;
+  padding: 5px 5%;
+  background-color: #cdb2c3;
   width: 100%;
   box-sizing: border-box;
 }
