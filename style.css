@@ -221,51 +221,52 @@ ul li {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  margin: 40px auto;
-  padding: 30px;
-  max-width: 1000px;
-  background-color: #f0e6ec;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding: 40px 5%;
+  background-color: #cfc4cb;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .left-column {
   flex: 1;
   max-width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-pic {
   width: 100%;
+  max-width: 250px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .right-column {
   flex: 2;
+  padding-left: 40px;
   color: #2a2a2a;
 }
 
 .right-column h2 {
   margin-top: 0;
   color: #4b004f;
+  font-size: 24px;
 }
 
 @media (max-width: 768px) {
   .floating-body {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .left-column,
-  .right-column {
-    max-width: 100%;
     text-align: center;
   }
 
   .right-column {
+    padding-left: 0;
     margin-top: 20px;
+  }
+
+  .left-column {
+    max-width: 80%;
   }
 }
