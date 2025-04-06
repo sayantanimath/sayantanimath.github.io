@@ -219,48 +219,53 @@ ul li {
 
 .floating-body {
   display: flex;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 30px auto;
-  width: 80%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 1000px;
+  background-color: #f0e6ec;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .left-column {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 30%;
 }
 
 .profile-pic {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .right-column {
   flex: 2;
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  color: #2a2a2a;
 }
 
 .right-column h2 {
   margin-top: 0;
+  color: #4b004f;
 }
 
 @media (max-width: 768px) {
   .floating-body {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column,
+  .right-column {
+    max-width: 100%;
+    text-align: center;
   }
 
   .right-column {
-    padding-left: 0;
     margin-top: 20px;
   }
 }
-
-
