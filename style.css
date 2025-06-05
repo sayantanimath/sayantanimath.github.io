@@ -2,18 +2,19 @@ body {
     font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
     margin: 0;
     padding: 0;
-    background-color: #CFC4CB;
+    background-color: #F9FBFE;
     height: 100%;
 }
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #2A6BB2;
+
 }
 ​
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -21,18 +22,20 @@ body {
 }
 ​
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #1F5DA1;
   color: black;
 }
 ​
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #1F5DA1;
+  color: #FFFFFF;
+  border-bottom: 2px solid #A4C7F3;
+  border-radius: 4px;
 }
 
 /* Blog Post Styles */
 .blog-post {
-    background: #CFC4CB;
+    background: #FFFFFF;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin: 20px 20px; /* Center-align in mobile view */
@@ -54,7 +57,7 @@ header {
     position: relative; /* Ensure positioning context */
     /*background-color: #40162F;
     color: #fff;--> */
-    background: linear-gradient(to bottom, #40162F, #876D7B);
+    background: linear-gradient(to bottom, #DCEEFF, #65A2E6, #2A6BB2);
     color: white;
     padding: 30px 40px;
     text-align: center;
@@ -64,8 +67,8 @@ header {
 
 footer {
     position: relative; /* Ensure positioning context */
-    background: linear-gradient(to bottom, #876D7B, #40162F);
-    color: #fff;
+    background: linear-gradient(to top, #DCEEFF, #65A2E6, #2A6BB2);
+    color: white;
     padding: 30px 40px;
     text-align: center;
     height:auto;
@@ -88,7 +91,8 @@ footer {
     width: 18%; /* Size: 10% of the viewport width when screen is less than 700px */
   }
   .header {
-      background-color: #AAAAFF; /* Change background color to verify media query */
+       background: #65A2E6; /* solid base blue */
+       color: white; /* Change background color to verify media query */
   }
     .blog-post {
         width: 100%; /* Full width on mobile */
@@ -102,7 +106,7 @@ nav {
     position: relative; /* Ensure positioning context */
     height:5%;
     /*background-color: #876D7B; */
-    background: linear-gradient(to bottom, #876D7B, #D3C5CC);
+    background: linear-gradient(to bottom, #5A97DA, #2A6BB2);
     color: white;
     padding: 20px;
     text-align: center;
@@ -139,7 +143,7 @@ nav ul li a:hover {
     padding: 20px;
     text-align: left;
     font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
-    background-color: #f0f0f0;
+    background-color: #f0f6ff;
 }
 
 
@@ -160,13 +164,15 @@ nav ul li a:hover {
     height: auto + 10px;
     padding: 10px; /* Adjust padding as needed */
     border-radius: 25%; /*Makes it round */
-    background-color: #40162F; /* Matches the nav background */
+     background-color: #A4C7F3;
+  color: #2C3E50; /* Matches the nav background */
     display: inline-block; /* Allows it to wrap around content */
 }
 
 .navcloud:hover {
-    background-color: #fff; /* Invert background color */
-    color: #E91C9A; /* Invert text color */
+    background-color: #2A6BB2;
+    color: #FFFFFF;
+    cursor: pointer;
     width: fit-content+10px; /* Ensures it wraps around the content */
     height: auto + 10px;
     padding: 10px; /* Adjust padding as needed */
