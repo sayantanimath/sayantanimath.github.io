@@ -1,5 +1,5 @@
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
     margin: 0;
     padding: 0;
     background-color: #F9FBFE;
@@ -7,98 +7,105 @@ body {
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #2A6BB2;
-}
+  overflow: hidden;
+  background-color: #2A6BB2;
 
+}
+​
 .topnav a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
-
+​
 .topnav a:hover {
-    background-color: #1F5DA1;
-    color: black;
+  background-color: #1F5DA1;
+  color: black;
 }
-
+​
 .topnav a.active {
-    background-color: #1F5DA1;
-    color: #FFFFFF;
-    border-bottom: 2px solid #A4C7F3;
-    border-radius: 4px;
+  background-color: #1F5DA1;
+  color: #FFFFFF;
+  border-bottom: 2px solid #A4C7F3;
+  border-radius: 4px;
 }
 
+/* Blog Post Styles */
 .blog-post {
     background: #FFFFFF;
     border: 1px solid #ccc;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px 20px; /* Center-align in mobile view */
     padding: 20px;
-    width: calc(100% - 40px);
-    float: left;
+    width: calc(100% - 40px); /* Default for desktop: 45% width */
+    float: left; /* Float for side-by-side layout */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Clearfix for Floating Elements */
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
 
+
 header {
-    position: relative;
+    position: relative; /* Ensure positioning context */
+    /*background-color: #40162F;
+    color: #fff;--> */
     background: linear-gradient(to bottom, #DCEEFF, #65A2E6, #2A6BB2);
     color: white;
     padding: 30px 40px;
     text-align: center;
-    height: auto;
+    height:auto;
 }
 
+
 footer {
-    position: relative;
+    position: relative; /* Ensure positioning context */
     background: linear-gradient(to top, #DCEEFF, #65A2E6, #2A6BB2);
     color: white;
     padding: 30px 40px;
     text-align: center;
-    height: auto;
+    height:auto;
 }
 
 .favicon {
     position: absolute;
     top: 10px;
     left: 10px;
-    height: 90%;
+    /* width: 128px; /* Adjust as needed */
+    /* height: 128px; Maintain aspect ratio */
+    height: 90%; /* Default size: 90% of the header height */
 }
-
 @media (max-width: 700px) {
-    .favicon {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: auto;
-        width: 18%;
-    }
-
-    .header {
-        background: #65A2E6;
-        color: white;
-    }
-
+  .favicon {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: 18%; /* Size: 10% of the viewport width when screen is less than 700px */
+  }
+  .header {
+       background: #65A2E6; /* solid base blue */
+       color: white; /* Change background color to verify media query */
+  }
     .blog-post {
-        width: 100%;
-        float: none;
-        margin: 10px;
-        padding: 15px;
+        width: 100%; /* Full width on mobile */
+        float: none; /* Remove float for vertical stacking */
+        margin: 10px 10px; /* Adjust margin for mobile spacing */
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 }
 
 nav {
-    position: relative;
-    height: 5%;
+    position: relative; /* Ensure positioning context */
+    height:5%;
+    /*background-color: #876D7B; */
     background: linear-gradient(to bottom, #5A97DA, #2A6BB2);
     color: white;
     padding: 20px;
@@ -119,6 +126,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    /*color: #fff; */
     color: white;
     font-weight: bold;
     padding: 5px 10px;
@@ -130,37 +138,46 @@ nav ul li a:hover {
     color: #fff;
 }
 
+
 .content {
     padding: 20px;
     text-align: left;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
     background-color: #f0f6ff;
 }
 
+
+
 .cloud {
-    width: 90% !important;
+    width: 90% !important; /* Forcefully set width to 90% of the screen width */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Increased spread radius and adjusted transparency */
     text-align: justify;
     overflow: hidden;
     margin: auto;
 }
 
 .navcloud {
-    width: calc(100% + 10px);
-    padding: 10px;
-    border-radius: 25%;
-    background-color: #A4C7F3;
-    color: #2C3E50;
-    display: inline-block;
+    width: fit-content+10px; /* Ensures it wraps around the content */
+    height: auto + 10px;
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 25%; /*Makes it round */
+     background-color: #A4C7F3;
+  color: #2C3E50; /* Matches the nav background */
+    display: inline-block; /* Allows it to wrap around content */
 }
 
 .navcloud:hover {
     background-color: #2A6BB2;
     color: #FFFFFF;
     cursor: pointer;
+    width: fit-content+10px; /* Ensures it wraps around the content */
+    height: auto + 10px;
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 25%; /* Makes it round */
+    display: inline-block; /* Allows it to wrap around content */
 }
 
 .download-cv {
@@ -189,13 +206,15 @@ nav ul li a:hover {
 
 .list-inline.social li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 10px; /* Adjust as needed */
 }
 
 .list-inline.social li:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Remove right margin from last item */
 }
 
+
+/* Center bullets */
 ul {
     text-align: left;
 }
@@ -205,55 +224,55 @@ ul li {
 }
 
 .floating-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 5%;
-    background-color: #cfc4cb;
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 5%;
+  background-color: #cfc4cb;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .left-column {
-    flex: 1;
-    max-width: 30%;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  max-width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-pic {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .right-column {
-    flex: 2;
-    padding-left: 40px;
-    color: #2a2a2a;
+  flex: 2;
+  padding-left: 40px;
+  color: #2a2a2a;
 }
 
 .right-column h2 {
-    margin-top: 0;
-    color: #4b004f;
-    font-size: 24px;
+  margin-top: 0;
+  color: #4b004f;
+  font-size: 24px;
 }
 
 @media (max-width: 768px) {
-    .floating-body {
-        flex-direction: column;
-        text-align: center;
-    }
+  .floating-body {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .right-column {
-        padding-left: 0;
-        margin-top: 20px;
-    }
+  .right-column {
+    padding-left: 0;
+    margin-top: 20px;
+  }
 
-    .left-column {
-        max-width: 80%;
-    }
+  .left-column {
+    max-width: 80%;
+  }
 }
