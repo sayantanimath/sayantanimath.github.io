@@ -57,7 +57,7 @@ header {
     position: relative; /* Ensure positioning context */
     /*background-color: #40162F;
     color: #fff;--> */
-    background: linear-gradient(to bottom, #DCEEFF, #65A2E6, #2A6BB2);
+    background: linear-gradient(to top, #d0e2f5, #b7d1ed, #8cbaed);
     color: white;
     padding: 30px 40px;
     text-align: center;
@@ -67,7 +67,7 @@ header {
 
 footer {
     position: relative; /* Ensure positioning context */
-    background: linear-gradient(to top, #DCEEFF, #65A2E6, #2A6BB2);
+    background: linear-gradient(to bottom, #d0e2f5, #b7d1ed, #8cbaed);
     color: white;
     padding: 30px 40px;
     text-align: center;
