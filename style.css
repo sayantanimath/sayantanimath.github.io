@@ -326,14 +326,6 @@ ul li {
   font-size: 24px;
 }
 
-.page-fadeout {
-  height: 80px; /* adjust height if needed */
-  width: 100%;
-  background: linear-gradient(to bottom, #d0e2f5, #b7d1ed, #8cbaed);
-  margin: 0;
-  padding: 0;
-  border: none;
-}
 
 @media (max-width: 768px) {
 
