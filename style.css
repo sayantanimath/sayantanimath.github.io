@@ -67,6 +67,7 @@ header {
 .header-icons {
     position: relative;
     top: 15px;
+    bottom: 5px;
     right: 20px;
     display: flex;
     flex-direction: column;
@@ -104,7 +105,7 @@ footer {
 
 .favicon {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 10px;
     /* width: 128px; /* Adjust as needed */
     /* height: 128px; Maintain aspect ratio */
@@ -128,7 +129,7 @@ footer {
   header h1 {
     font-size: 26px;
     text-align: center;
-    margin-top: 50px; /* Push title down to avoid overlap */
+    margin-top: 40px; /* Push title down to avoid overlap */
   }
     
   .favicon {
