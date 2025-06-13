@@ -73,19 +73,21 @@ header {
     flex-direction: column;
     align-items: flex-end;
     z-index: 999;
+    justify-content: center;
 }
 
 .list-inline.social {
     display: flex;
-    gap: 5px;
-    padding: 0;
+    gap: 8px;
+    padding: 5px 0;
     list-style: none;
     margin: 0;
 }
 
 .icon-small {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
     transition: transform 0.3s ease;
 }
 
