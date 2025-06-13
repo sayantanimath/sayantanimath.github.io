@@ -16,9 +16,9 @@ body {
   float: left;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 25px 25px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 ​
 .topnav a:hover {
@@ -35,7 +35,7 @@ body {
 
 /* Blog Post Styles */
 .blog-post {
-    background: #FFFFFF;
+    background: #d0e2f5;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin: 20px 20px; /* Center-align in mobile view */
@@ -108,7 +108,7 @@ nav {
     /*background-color: #876D7B; */
     /*background: linear-gradient(to bottom, #5A97DA, #2A6BB2);*/
     color: white;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -143,7 +143,7 @@ nav ul li a:hover {
     padding: 20px;
     text-align: left;
     font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
-    background-color: #f0f6ff;
+    background-color: #d0e2f5;
 }
 
 
