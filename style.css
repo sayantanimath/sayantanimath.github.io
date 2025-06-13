@@ -67,7 +67,7 @@ header {
 .header-icons {
     position: relative;
     top: 15px;
-    bottom: 10px;
+    bottom: 15px;
     right: 20px;
     display: flex;
     flex-direction: column;
@@ -79,7 +79,7 @@ header {
 .list-inline.social {
     display: flex;
     gap: 5px;
-    padding: 0;
+    padding: 5px;
     list-style: none;
     margin: 0;
 }
@@ -89,6 +89,7 @@ header {
     height: 20px;
     vertical-align: middle;
     transition: transform 0.3s ease;
+    padding: 5px;
 }
 
 .icon-small:hover {
@@ -118,6 +119,7 @@ footer {
 .header-icons {
     top: 10px;
     right: 10px;
+    bottom: 10px;
     flex-direction: column;       /* icons + clock go side-by-side */
     align-items: center;
     gap: 6px;
@@ -131,7 +133,7 @@ footer {
   header h1 {
     font-size: 26px;
     text-align: center;
-    margin-top: 40px; /* Push title down to avoid overlap */
+    margin-top: 30px; /* Push title down to avoid overlap */
   }
     
   .favicon {
@@ -337,7 +339,7 @@ ul li {
 
 .right-column {
   flex: 2;
-  padding-left: 40px;
+  padding-left: 30px;
     color: #65A2E6;
 }
 
