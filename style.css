@@ -165,9 +165,9 @@ nav {
     /*background-color: #876D7B; */
     /*background: linear-gradient(to bottom, #5A97DA, #2A6BB2);*/
     color: white;
-    padding: 10px 10px;
+    padding: 5px 5px;
     text-align: center;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 nav ul {
@@ -194,6 +194,8 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #fff;
+    background-color: transparent;
+    border-bottom: 2px solid #A4C7F3;
 }
 
 
@@ -226,12 +228,11 @@ nav ul li a:hover {
 
 .navcloud {
     width: fit-content+10px; /* Ensures it wraps around the content */
-    height: auto + 10px;
-    /*padding: 10px; /* Adjust padding as needed */
-    /*border-radius: 25%; /*Makes it round */
-     /*background-color: #A4C7F3;
-  color: #2C3E50; /* Matches the nav background */
+    height: auto + 5px;
     display: inline-block; /* Allows it to wrap around content */
+    padding: 8px 14px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .navcloud:hover {
@@ -239,10 +240,11 @@ nav ul li a:hover {
     color: #FFFFFF;
     cursor: pointer;
     width: fit-content+10px; /* Ensures it wraps around the content */
-    height: auto + 10px;
-    padding: 10px; /* Adjust padding as needed */
-    border-radius: 25%; /* Makes it round */
+    height: auto + 5px;
+    padding: 5px; /* Adjust padding as needed */
+    border-radius: 10%; /* Makes it round */
     display: inline-block; /* Allows it to wrap around content */
+    border-bottom: 2px solid #A4C7F3;
 }
 
 .download-cv {
