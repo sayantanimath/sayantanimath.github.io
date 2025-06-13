@@ -16,7 +16,7 @@ body {
   float: left;
   color: white;
   text-align: center;
-  padding: 40px 40px;
+  padding: 20px 20px;
   text-decoration: none;
   font-size: 25px;
 }
@@ -57,9 +57,9 @@ header {
     position: relative; /* Ensure positioning context */
     /*background-color: #40162F;
     color: #fff;--> */
-    background: #8cbaed;
+    background: linear-gradient(to top, #d0e2f5, #b7d1ed, #8cbaed);
     color: white;
-    padding: 10px 20px;
+    padding: 20px 30px;
     text-align: center;
     height:auto;
 }
@@ -67,7 +67,7 @@ header {
 
 footer {
     position: relative; /* Ensure positioning context */
-    background: #8cbaed;
+    background: linear-gradient(to bottom, #d0e2f5, #b7d1ed, #8cbaed);
     color: white;
     padding: 20px 30px;
     text-align: center;
@@ -143,8 +143,7 @@ nav ul li a:hover {
     padding: 20px;
     text-align: left;
     font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
-    background-color: #8cbaed;
-    color: white;
+    background-color: #d0e2f5;
 }
 
 
@@ -230,7 +229,7 @@ ul li {
   justify-content: center;
   align-items: center;
   padding: 40px 5%;
-  background-color: #8cbaed;
+    background-color: #d0e2f5;
   width: 100%;
   box-sizing: border-box;
 }
@@ -253,12 +252,12 @@ ul li {
 .right-column {
   flex: 2;
   padding-left: 40px;
-  color: #8cbaed;
+    color: #65A2E6;
 }
 
 .right-column h2 {
   margin-top: 0;
-  color: #8cbaed;
+    color: #65A2E6;
   font-size: 24px;
 }
 
