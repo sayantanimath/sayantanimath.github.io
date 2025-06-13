@@ -16,7 +16,7 @@ body {
   float: left;
   color: white;
   text-align: center;
-  padding: 25px 25px;
+  padding: 30px 30px;
   text-decoration: none;
   font-size: 20px;
 }
@@ -229,7 +229,7 @@ ul li {
   justify-content: center;
   align-items: center;
   padding: 40px 5%;
-  background-color: #F9FBFE;
+  background-color: #d0e2f5;
   width: 100%;
   box-sizing: border-box;
 }
