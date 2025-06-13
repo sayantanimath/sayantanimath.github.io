@@ -163,7 +163,7 @@ nav {
     overflow-x: auto;
     max-width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     list-style: none;
     list-style-type: none;
     margin: 5px;
@@ -180,7 +180,7 @@ nav ul {
     overflow-x: auto;
     max-width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     list-style: none;
     list-style-type: none;
     margin: 5px;
