@@ -64,6 +64,42 @@ header {
     height:auto;
 }
 
+.header-icons {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 999;
+}
+
+.list-inline.social {
+    display: flex;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.icon-small {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon-small:hover {
+    transform: scale(1.2);
+}
+
+.clock {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-family: monospace;
+    text-align: right;
+    color: #ffffff;
+}
+
 
 footer {
     position: relative; /* Ensure positioning context */
