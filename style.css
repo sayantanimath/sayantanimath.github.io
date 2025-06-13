@@ -217,6 +217,13 @@ nav ul li a:hover {
     margin: auto;
 }
 
+.content,
+.floating-body,
+.cloud {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .navcloud {
     width: fit-content+10px; /* Ensures it wraps around the content */
     height: auto + 10px;
@@ -322,7 +329,7 @@ ul li {
 .page-fadeout {
   height: 80px; /* adjust height if needed */
   width: 100%;
-  background: linear-gradient(to top, #d0e2f5, #b7d1ed, #8cbaed);
+  background: linear-gradient(to bottom, #d0e2f5, #b7d1ed, #8cbaed);
   margin: 0;
   padding: 0;
   border: none;
