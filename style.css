@@ -280,6 +280,11 @@ nav ul li a:hover {
     margin-right: 0; /* Remove right margin from last item */
 }
 
+ .limited-width-paragraph {
+  text-align: justify;
+  max-width: 550px;
+  margin: auto;
+}
 
 /* Center bullets */
 ul {
