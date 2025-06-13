@@ -345,52 +345,25 @@ ul li {
   font-size: 24px;
 }
 
-.back-to-home,
-.back-to-top {
-  position: fixed;
-  right: 20px;
-  background-color: #65A2E6;
-  color: white;
-  padding: 10px;
-  border-radius: 4px;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.back-to-home {
-  bottom: 70px; /* above the 'Back to Top' button */
-}
-
-.back-to-top {
-  bottom: 20px;
-}
-
-.nav-shortcuts {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
+.inline-nav-links {
+  margin-top: 20px;
   display: flex;
-  gap: 16px; /* space between the items */
+  gap: 16px; /* space between links */
 }
 
-.nav-shortcuts li {
-  display: inline;
-}
-
-.nav-shortcuts a {
+.inline-nav-links a {
   text-decoration: none;
   color: #2A6BB2;
   font-weight: bold;
-  padding: 6px 10px;
   border: 1px solid #2A6BB2;
+  padding: 6px 12px;
   border-radius: 4px;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
 }
 
-.nav-shortcuts a:hover {
-  background-color: #e6f0fb;
+.inline-nav-links a:hover {
+  background-color: #eaf3fc;
 }
-
 
 @media (min-height: 500px) {
   .back-to-top {
