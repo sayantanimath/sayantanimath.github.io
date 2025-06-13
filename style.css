@@ -223,7 +223,7 @@ nav ul li a:hover {
 .cloud {
     width: 90% !important; /* Forcefully set width to 90% of the screen width */
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Increased spread radius and adjusted transparency */
     text-align: justify;
