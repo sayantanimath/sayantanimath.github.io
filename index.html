@@ -60,8 +60,6 @@
                 </a>
             </li>
         </ul>
-
-        <div id="world-clock" class="clock" style="margin-bottom: 10px;"></div>
     </div>
 
     <!-- Navigation -->
@@ -119,51 +117,6 @@
 	  <p style="color: #4093ed; text-align: center;">You can find my CV <a href="/pages/CV2.pdf" style="text-decoration:none">HERE</a>.</p>
 </div>
 </div>
-	
-	
-<!-- Include the following scripts at the end of your body section -->
-<script>
-function updateClock() {
-    const clockElement = document.getElementById('world-clock');
-    const now = new Date();
-    const options = {
-        timeZone: 'America/Chicago', // CDT
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    };
-    const timeInCDT = now.toLocaleTimeString('en-US', options);
-    clockElement.textContent = `CDT   ${timeInCDT}`;
-}
-
-    function generateRandomMatrix() {
-    const matrixElement = document.getElementById('random-matrix');
-    const matrix = Array.from({ length: 3 }, () => 
-        Array.from({ length: 3 }, () => Math.floor(Math.random() * 2)) // Binary values (0 or 1)
-    );
-
-    // Create the matrix table with borders
-    let tableHTML = '<table style="border-collapse: collapse; width: 100px; height: 100px; text-align: center;">';
-    matrix.forEach(row => {
-        tableHTML += '<tr>';
-        row.forEach(cell => {
-            tableHTML += `<td style="border: 1px solid black; font-size: 18px;">${cell}</td>`;
-        });
-        tableHTML += '</tr>';
-    });
-    tableHTML += '</table>';
-
-    matrixElement.innerHTML = tableHTML;
-}
-
-// Initial function calls
-updateClock();
-//generateRandomMatrix();
-setInterval(updateClock, 1000); // Update clock every second
-
-
-</script>
 	
 </body>
 </html>
