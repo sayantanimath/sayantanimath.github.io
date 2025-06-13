@@ -57,7 +57,7 @@ header {
     position: relative; /* Ensure positioning context */
     /*background-color: #40162F;
     color: #fff;--> */
-    background: linear-gradient(to top, #d0e2f5, #b7d1ed, #8cbaed);
+    background: #8cbaed;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -67,7 +67,7 @@ header {
 
 footer {
     position: relative; /* Ensure positioning context */
-    background: linear-gradient(to bottom, #d0e2f5, #b7d1ed, #8cbaed);
+    background: #8cbaed;
     color: white;
     padding: 20px 30px;
     text-align: center;
@@ -143,7 +143,8 @@ nav ul li a:hover {
     padding: 20px;
     text-align: left;
     font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
-    background-color: #d0e2f5;
+    background-color: #8cbaed;
+    color: white;
 }
 
 
@@ -229,7 +230,7 @@ ul li {
   justify-content: center;
   align-items: center;
   padding: 40px 5%;
-  background-color: #d0e2f5;
+  background-color: #8cbaed;
   width: 100%;
   box-sizing: border-box;
 }
@@ -252,12 +253,12 @@ ul li {
 .right-column {
   flex: 2;
   padding-left: 40px;
-  color: #65A2E6;
+  color: #8cbaed;
 }
 
 .right-column h2 {
   margin-top: 0;
-  color: #65A2E6;
+  color: #8cbaed;
   font-size: 24px;
 }
 
