@@ -1,7 +1,7 @@
 body {
     font-family: "Trebuchet MS", sans-serif; /* Use Times New Roman */
-    margin: 20px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
     background-color:  #d0e2f5;
     height: 100%;
 }
@@ -234,8 +234,8 @@ nav ul li a:hover {
 .content,
 .floating-body,
 .cloud {
-  margin-bottom: 20;
-  padding-bottom: 10;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .navcloud {
