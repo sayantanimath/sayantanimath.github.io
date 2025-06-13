@@ -365,6 +365,32 @@ ul li {
   bottom: 20px;
 }
 
+.nav-shortcuts {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  gap: 16px; /* space between the items */
+}
+
+.nav-shortcuts li {
+  display: inline;
+}
+
+.nav-shortcuts a {
+  text-decoration: none;
+  color: #2A6BB2;
+  font-weight: bold;
+  padding: 6px 10px;
+  border: 1px solid #2A6BB2;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nav-shortcuts a:hover {
+  background-color: #e6f0fb;
+}
+
 
 @media (min-height: 500px) {
   .back-to-top {
