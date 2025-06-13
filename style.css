@@ -160,12 +160,13 @@ footer {
 }
 
 nav {
-    position: relative; /* Ensure positioning context */
-    height:5%;
+    /*position: absolute; /* Ensure positioning context */
+    /*height:5%;
     /*background-color: #876D7B; */
     /*background: linear-gradient(to bottom, #5A97DA, #2A6BB2);*/
     color: white;
     padding: 5px 5px;
+    justify-content: center;
     text-align: center;
     font-size: 17px;
     overflow-x: auto;
