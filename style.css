@@ -345,17 +345,26 @@ ul li {
   font-size: 24px;
 }
 
+.back-to-home,
 .back-to-top {
   position: fixed;
-  bottom: 20px;
   right: 20px;
-  background-color: #0066aa;
+  background-color: #65A2E6;
   color: white;
   padding: 10px;
   border-radius: 4px;
   text-decoration: none;
-  display: none;
+  z-index: 1000;
 }
+
+.back-to-home {
+  bottom: 70px; /* above the 'Back to Top' button */
+}
+
+.back-to-top {
+  bottom: 20px;
+}
+
 
 @media (min-height: 500px) {
   .back-to-top {
