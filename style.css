@@ -167,7 +167,12 @@ nav {
     color: white;
     padding: 5px 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 17px;
+    overflow-x: auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
 }
 
 nav ul {
