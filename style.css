@@ -157,7 +157,7 @@ nav {
     /*background: linear-gradient(to bottom, #5A97DA, #2A6BB2);*/
     color: white;
     padding: 5px 5px;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     font-size: 17px;
     overflow-x: auto;
@@ -174,7 +174,7 @@ nav {
 nav ul {
     color: white;
     padding: 5px 5px;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     font-size: 17px;
     overflow-x: auto;
