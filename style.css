@@ -1,5 +1,5 @@
 body {
-    font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
+    font-family: "Trebuchet MS", sans-serif; /* Use Times New Roman */
     margin: 0;
     padding: 0;
     background-color:  #d0e2f5;
@@ -16,9 +16,9 @@ body {
   float: left;
   color: white;
   text-align: center;
-  padding: 30px 30px;
+  padding: 40px 40px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 ​
 .topnav a:hover {
@@ -108,7 +108,7 @@ nav {
     /*background-color: #876D7B; */
     /*background: linear-gradient(to bottom, #5A97DA, #2A6BB2);*/
     color: white;
-    padding: 25px;
+    padding: 30px;
     text-align: center;
 }
 
