@@ -124,13 +124,14 @@ footer {
 .header-icons {
     top: 10px;
     right: 10px;
-    flex-direction: row;       /* icons + clock go side-by-side */
+    flex-direction: column;       /* icons + clock go side-by-side */
     align-items: center;
-    gap: 10px;
+    gap: 8px;
   }
 
   .clock {
     font-size: 0.8rem;
+    margin-top: 5px;
   }
 
   header h1 {
