@@ -282,7 +282,7 @@ nav ul li a:hover {
 
  .limited-width-paragraph {
   text-align: justify;
-  max-width: 550px;
+  max-width: 300px;
   margin: auto;
 }
 
