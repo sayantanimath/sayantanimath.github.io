@@ -4,22 +4,23 @@ body {
     padding: 0;
     background-color:  #d0e2f5;
     height: 100%;
-    overflow-x: hidden;
 }
 
 .topnav {
   overflow: hidden;
   background-color: #2A6BB2;
-
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 30px;
 }
 ​
 .topnav a {
   float: left;
   color: white;
   text-align: center;
-  padding: 15px 15px;
+  padding: 5px 5px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
 }
 ​
 .topnav a:hover {
