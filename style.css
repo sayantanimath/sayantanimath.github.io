@@ -165,14 +165,15 @@ nav {
     /*background-color: #876D7B; */
     /*background: linear-gradient(to bottom, #5A97DA, #2A6BB2);*/
     color: white;
-    padding: 30px;
+    padding: 10px 10px;
     text-align: center;
+    font-size: 20px;
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
     text-align: center;
 }
 
