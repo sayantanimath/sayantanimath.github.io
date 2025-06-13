@@ -1,264 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sayantani Bhattacharya</title>
-    <!--link rel="icon" href="MyFavicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="MyFavicon.png" type="image/x-icon">
-	<!--<link rel="icon" href="https://sayantani-bhattacharya-math.github.io/MyFavicon.ico?v=2" type="image/x-icon">
-<link rel="shortcut icon" href="https://sayantani-bhattacharya-math.github.io/MyFavicon.ico?v=2" type="image/x-icon">-->
-    <link rel="stylesheet" href="/style.css">
-    
-    <script>
-    	MathJax = {
-        	tex: {
-            		inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-           		displayMath: [ ['\\[', '\\]'] ]
-        	},
-        	svg: {
-            		fontCache: 'global'
-        	}
-    	};
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-    </script>	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sayantani Bhattacharya</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+	
+
 <body>
-    <header>
-	<a href="/index.html" align="left"> <!-- Anchor tag wrapping the favicon -->
-		<!--img src="/MyFavicon.png" alt="Favicon" class="favicon"-->
-    	</a>
-        <h1 style="font-size: 36px;">Sayantani Bhattacharya</h1>
-    </header>
-  <nav>
-	<ul>
-		<!--li><a href="/pages/about.html"> <div class="navcloud">About Me</div></a></li-->
-    		<li><a href="/pages/Contact.html"><div class="navcloud">Contact</div></a></li>
-		<!--li><a href="/pages/CV2.pdf"> <div class="navcloud">CV</div></a></li-->
-   		<li><a href="/pages/Teaching.html"><div class="navcloud">Teaching</div></a></li>
-    		<li><a href="/pages/Research.html"><div class="navcloud">Research</div></a></li>
-    		<li><a href="/pages/Coursework.html"><div class="navcloud">Course Notes</div></a></li>
-    		<!--li><a href="/pages/Blog.html"><div class="navcloud">Blog</div></a></li>
-		<!-- <li><a href="/pages/publications.html"><div class="navcloud">Publication</div></a></li> -->
-		<li><a href="/pages/resources.html"><div class="navcloud">Resources</div></a></li>
-</ul>
-</nav>
-<!-- Floating Body Section -->
+
+  <header>
+    <nav class="navbar">
+      <h1>Sayantani Bhattacharya</h1>
+      <ul class="nav-links">
+        <li><a href="/pages/Contact.html">Contact</a></li>
+        <li><a href="/pages/Teaching.html">Teaching</a></li>
+        <li><a href="/pages/Research.html">Research</a></li>
+        <li><a href="/pages/Coursework.html">Course Notes</a></li>
+        <li><a href="/pages/resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
 
 
-<!-- math theorem here-->
 
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #8cbaed; /* Background color for the page */
-            color: white; /* Text color */
-            padding: 0px;
-            text-align: center;
-        }
-    </style>	
-
-<!--div class="theorem" id="theoremDisplay"></div>
-	
-
-<!-- body here-->
-<!-- Updated Floating Body Section -->
-<div class="floating-body">
-  <div class="left-column">
-    <img src="/pages/IMG_7907.jpeg" alt="Sayantani Bhattacharya" class="profile-pic">
-  </div>
-  <div class="right-column">
-	  <h2>Welcome!</h2>
-    <p>
-      Hi! I'm Sayantani Bhattacharya, currently a second year Ph.D. student in Mathematics at <a href="https://www.auburn.edu/cosam/departments/math/students/grad/graduate-students.htm">Auburn University</a>, Alabama, USA. 
-	    Previously I completed my Masters from <a href="https://www.tezu.ernet.in/dmaths/">Tezpur University</a>, Assam, India. My Bachelor Degree was from <a href="https://www.cmi.ac.in">Chennai Mathematical Institute</a>, Tamil Nadu, India, 
-	    where I completed a dual degree in Mathematics and Computer Science. I am interested in Matroid Theory, Combinatorics, Commutative Algebra. Apart from Mathematics, I 
-	    enjoy learning languages (trilingual, currently learning Japanese) and painting.
-    
-    </p>
-	  <p>You can find my CV <a href="/pages/CV2.pdf">HERE</a>.</p>
-</div>
-</div>
-	
-<footer>
-    <table style="width: 100%;">
-        <colgroup>
-            <col style="width: 50%;">
-            <col style="width: 50%;">
-        </colgroup>
-        <tr>
-            <!-- Social Media Icons on the Left -->
-            <td>
-                <ul class="list-inline social" style="display: flex; gap: 10px;">
-                    <li>
-                        <a title="Linkedin" href="https://www.linkedin.com/in/sayantani-bhattacharya-aa0437118" target="_blank" aria-label="Sayantani Bhattacharya Linkedin">
-                            <svg class="icon" viewBox="0 0 24 24" width="40" height="40">
-                                <path fill="#ffffff" d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
-                            </svg>
-                        </a>
-                    </li>
-                     <li>
-                        <a title="Academia.edu" href="https://auburn.academia.edu/SayantaniBhattacharya" target="_blank" aria-label="Sayantani Bhattacharya Academia.edu">
+<main class="main-container">
+    <aside class="profile">
+      <img src="/pages/IMG_7907.jpeg" alt="Sayantani Bhattacharya" class="profile-pic" />
+      <div class="icon-links">
+        <a href="mailto:szb0261@auburn.edu" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/sayantani-bhattacharya-aa0437118" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a title="Academia.edu" href="https://auburn.academia.edu/SayantaniBhattacharya" target="_blank" aria-label="Sayantani Bhattacharya Academia.edu">
                             <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 24 23" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M24 21.1942V22.4H13.2272V21.1942C15.0281 21.1624 15.913 20.7822 15.913 19.7656C15.913 19.4173 15.7817 19.0037 15.6175 18.528L14.4026 15.5707H6.01683C5.31582 17.3429 4.79048 18.6664 4.7166 18.8462C3.93023 20.7726 5.01047 21.0081 6.86394 21.1926C6.86887 21.1926 6.87215 21.1942 6.87544 21.1942C6.87544 21.1942 6.87544 21.1942 6.87708 21.1942L6.87544 22.4H0V21.1942C0.883234 21.0351 1.60394 20.8776 1.8978 20.0202L8.90622 2.5055L7.85717 0H13.7837L22.0694 20.0202C22.2155 20.4163 22.4699 20.6708 22.8016 20.8442C23.1332 21.0192 23.542 21.1146 24 21.1942ZM13.8946 12.9684L10.6774 4.71578C10.1485 6.1236 8.77553 9.7833 7.57884 12.9684H13.8946Z" fill="white"/>
                             </svg>
                         </a>
-                    </li>
-			<li>
-			<a title="Email" href="mailto:szb0261@auburn.edu" target="_blank" aria-label="Sayantani Bhattacharya Email">
-    <svg class="icon" viewBox="0 0 24 24" width="40" height="40">
-        <path fill="#ffffff" d="M12 13.065L2.4 6h19.2L12 13.065zM2 7.5v10A1.5 1.5 0 003.5 19h17a1.5 1.5 0 001.5-1.5v-10l-10 6.5L2 7.5z"/>
-    </svg>
-</a>
-				
-			</li>
-                    <!--li>
-                        <a title="Goodreads" href="https://www.goodreads.com/user/show/136086588-sayantani-bhattacharya" target="_blank" aria-label="Sayantani Bhattacharya Goodreads">
-                            <img width="37" height="37" viewBox="0 0 24 23" alt="Goodreads 'g' logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Goodreads_%27g%27_logo.svg/512px-Goodreads_%27g%27_logo.svg.png?20220601041842">
-		    </a>
-		</li-->
-                </ul>
-            </td>
+	      
+      </div>
+    </aside>
 
-            <!-- Clock and Random Matrix on the Right -->
-            <td align="right" style="vertical-align: top;">
-                <div id="world-clock" class="clock" style="margin-bottom: 10px;"></div>
-                <div id="random-matrix" class="matrix"></div>
-            </td>
-        </tr>
-    </table>
-	<p>© 2025 Sayantani Bhattacharya. All rights reserved.</p>
-</footer>
 
-	
-	
-<!-- Include the following scripts at the end of your body section -->
-<script>
-function updateClock() {
-    const clockElement = document.getElementById('world-clock');
+<section class="about">
+      <h2>Welcome!</h2>
+      <p>
+        Hi! I'm Sayantani Bhattacharya, currently a second-year Ph.D. student in Mathematics at 
+        <a href="https://www.auburn.edu/cosam/departments/math/students/grad/graduate-students.htm" target="_blank">Auburn University</a>, Alabama, USA. Previously I completed my Masters from 
+        <a href="https://www.tezu.ernet.in/dmaths/" target="_blank">Tezpur University</a>, Assam, India. My Bachelor Degree was from 
+        <a href="https://www.cmi.ac.in/" target="_blank">Chennai Mathematical Institute</a>, Tamil Nadu, India, where I completed a dual degree 
+        in Mathematics and Computer Science. I am interested in Matroid Theory, Combinatorics, Commutative Algebra. Apart from Mathematics, 
+        I enjoy learning languages (trilingual, currently learning Japanese) and painting.
+      </p>
+      <p>You can find my CV <a href="/pages/CV2.pdf" target="_blank" class="cv-link">HERE</a>.</p>
+    </section>
+  </main>	
+
+ <footer>
+    <p>&copy; 2025 Sayantani Bhattacharya. All rights reserved.</p>
+    <p class="timestamp">CDT <span id="time"></span></p>
+  </footer>
+
+  <script>
     const now = new Date();
-    const options = {
-        timeZone: 'America/Chicago', // CDT
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false
-    };
-    const timeInCDT = now.toLocaleTimeString('en-US', options);
-    clockElement.textContent = `CDT   ${timeInCDT}`;
-}
-
-    function generateRandomMatrix() {
-    const matrixElement = document.getElementById('random-matrix');
-    const matrix = Array.from({ length: 3 }, () => 
-        Array.from({ length: 3 }, () => Math.floor(Math.random() * 2)) // Binary values (0 or 1)
-    );
-
-    // Create the matrix table with borders
-    let tableHTML = '<table style="border-collapse: collapse; width: 100px; height: 100px; text-align: center;">';
-    matrix.forEach(row => {
-        tableHTML += '<tr>';
-        row.forEach(cell => {
-            tableHTML += `<td style="border: 1px solid black; font-size: 18px;">${cell}</td>`;
-        });
-        tableHTML += '</tr>';
-    });
-    tableHTML += '</table>';
-
-    matrixElement.innerHTML = tableHTML;
-}
-
-// Initial function calls
-updateClock();
-//generateRandomMatrix();
-setInterval(updateClock, 1000); // Update clock every second
-
-
-
-// random theorem generator here
-
-   const theorems = [
-            "Pigeonhole Principle: If n items are put into m containers, with n > m, then at least one container must contain more than one item.",
-            "Fundamental Theorem of Algebra: Every non-constant polynomial has at least one complex root.",
-            "De Morgan's Laws: The complement of the union of two sets is the intersection of their complements, and vice versa.",
-            "Euler's Formula: For any real number x, e^(ix) = cos(x) + i*sin(x).",
-            "Binomial Theorem: (a + b)^n = ∑(k=0 to n) (n choose k) * a^(n-k) * b^k.",
-            "Chinese Remainder Theorem: If n1, n2, ..., nk are pairwise coprime, then the system of simultaneous congruences has a solution.",
-            "Fermat's Little Theorem: If p is a prime and a is an integer not divisible by p, then a^(p-1) ≡ 1 (mod p).",
-            "Cauchy-Schwarz Inequality: For any real numbers a_i and b_i, (Σ a_i b_i)² ≤ (Σ a_i²)(Σ b_i²).",
-            "Hall's Marriage Theorem: A perfect matching exists if and only if for every subset of women, the number of potential husbands is at least the number of women.",
-            "Graph Coloring Theorem: Any planar graph can be colored with at most four colors so that no two adjacent vertices share the same color.",
-            "König's Theorem: In a bipartite graph, the size of the maximum matching is equal to the size of the minimum vertex cover.",
-            "Burnside's Lemma: The number of distinct objects under group actions can be calculated using the average number of fixed points of group elements.",
-            "Ramsey's Theorem: In any coloring of the edges of a complete graph, there exists a monochromatic complete subgraph of a certain size.",
-            "Bézout's Identity: The integers x and y exist such that ax + by = gcd(a, b).",
-            "Lagrange's Theorem: The order of a subgroup divides the order of the group.",
-            "Sylow's Theorems: Provides conditions for the existence and number of subgroups of a particular order in finite groups.",
-            "Cayley’s Theorem: Every group is isomorphic to a subgroup of the symmetric group acting on its elements.",
-            "Euler's Totient Theorem: If a is coprime to n, then a^φ(n) ≡ 1 (mod n).",
-            "Polya's Enumeration Theorem: A tool for counting the distinct configurations of objects under symmetry.",
-            "Chebyshev's Inequality: For any random variable X, P(|X - μ| ≥ kσ) ≤ 1/k².",
-            "L'Hôpital's Rule: If the limit results in an indeterminate form, the limit of the derivatives can be used to evaluate it.",
-            "Frobenius Coin Problem: The largest monetary amount that cannot be obtained using any combination of two relatively prime coin denominations is ab - a - b.",
-            "The Fundamental Theorem of Arithmetic: Every integer greater than 1 can be uniquely factored into primes.",
-            "Mersenne Prime Theorem: A Mersenne prime is of the form 2^p - 1, where p is prime.",
-            "Brouwer Fixed-Point Theorem: Any continuous function mapping a compact convex set to itself has at least one fixed point.",
-            "Cauchy-Binet Formula: A formula for the determinant of the product of two matrices.",
-            "The Interlacing Theorem: The eigenvalues of a Hermitian matrix interlace with those of a principal submatrix.",
-            "Grothendieck's Theorem: A generalization of the notion of dimension in algebraic geometry.",
-            "Liouville's Theorem: Every bounded entire function must be constant.",
-            "Noether's Theorem: Every differentiable symmetry of the action of a physical system has a corresponding conservation law.",
-            "Taylor's Theorem: Any function that is n-times differentiable can be approximated by a polynomial of degree n.",
-            "Banach-Tarski Paradox: A solid ball can be split into a finite number of pieces and reassembled into two solid balls of the same size.",
-            "Klein's Erlangen Program: A classification of geometries based on their symmetries.",
-            "Cayley-Hamilton Theorem: Every square matrix satisfies its own characteristic polynomial.",
-            "Waring's Problem: Every positive integer can be expressed as the sum of a fixed number of positive nth powers.",
-            "Gödel's Incompleteness Theorems: In any consistent formal system, there are statements that cannot be proven or disproven within that system.",
-            "Van Aubel's Theorem: Relates the lengths of segments in a triangle to the lengths of its sides and cevians.",
-            "Frobenius Theorem: Provides conditions under which a distribution is integrable.",
-            "Erdős–Szekeres Theorem: Any sequence of n distinct real numbers contains a monotonic subsequence of length at least √n.",
-            "Hahn-Banach Theorem: A fundamental result in functional analysis that allows the extension of bounded linear functionals.",
-            "Ramsey Theory: In any complete graph, for any integers k and l, there exists a sufficiently large n such that every graph of n vertices contains a complete subgraph of size k or an independent set of size l.",
-            "Möbius Function: A function that describes the combinatorial properties of partially ordered sets.",
-            "Heine-Borel Theorem: A subset of Euclidean space is compact if and only if it is closed and bounded.",
-            "Mertens' Theorem: Relates the asymptotic behavior of the sum of the reciprocals of the prime numbers.",
-            "Klein's Four-Group: An example of a non-cyclic group, specifically ℤ₂ × ℤ₂.",
-            "Ostrowski's Theorem: A characterization of the norm in algebraic number theory.",
-            "Poincaré Recurrence Theorem: A theorem in dynamical systems stating that certain systems will return to a state very close to the initial state after a long time.",
-            "Becker's Theorem: An extension of Hall's Marriage Theorem in the context of finite group actions.",
-            "Hoffman-Kruppa Theorem: Provides conditions for a graph to have a perfect matching based on its degree sequence.",
-            "Noether's Normalization Lemma: A key result in algebraic geometry that allows us to embed an algebraic variety into a space of lower dimension.",
-            "Petersen's Theorem: Every k-regular graph on n vertices has a perfect matching if n is even and k ≤ n/2.",
-            "The Existence of Zorn's Lemma: Every non-empty set of partially ordered sets has at least one maximal element.",
-            "Kuratowski's Theorem: Characterizes planar graphs in terms of forbidden subgraphs.",
-            "The Bolzano-Weierstrass Theorem: Every bounded sequence in Euclidean space has a convergent subsequence.",
-            "Turing's Halting Problem: The problem of determining whether a computer program will finish running or continue indefinitely.",
-            "The Central Limit Theorem: States that the distribution of sample means approximates a normal distribution as the sample size becomes larger.",
-            "Riesz Representation Theorem: Relates continuous linear functionals to measures.",
-            "Carathéodory's Theorem: A result in convex analysis concerning the representation of points in convex hulls.",
-            "Baire Category Theorem: In a complete metric space, the intersection of countably many dense open sets is dense.",
-            "Hodge Decomposition: Any differential form can be uniquely decomposed into exact, co-exact, and harmonic components.",
-            "Poincaré Conjecture: A simply connected, closed 3-manifold is homeomorphic to the 3-sphere.",
-            "Faltings' Theorem: Any curve of genus greater than 1 over a number field has only finitely many rational points."
-        ];
-
-	
-
-function getRandomTheorem() {
-            const randomIndex = Math.floor(Math.random() * theorems.length);
-            return theorems[randomIndex];
-        }
-
-        // Display a random theorem in the div with id "theoremDisplay"
-        document.getElementById('theoremDisplay').innerText = getRandomTheorem();
-	
-
-</script>
+    document.getElementById("time").textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  </script>
 </body>
 </html>
 
 
-
-  
