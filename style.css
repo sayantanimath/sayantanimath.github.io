@@ -345,6 +345,23 @@ ul li {
   font-size: 24px;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0066aa;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: none;
+}
+
+@media (min-height: 500px) {
+  .back-to-top {
+    display: block;
+  }
+}
 
 @media (max-width: 500px) {
 
