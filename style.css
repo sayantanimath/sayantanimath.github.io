@@ -347,8 +347,13 @@ ul li {
 
 .inline-nav-links {
   margin-top: 20px;
+ color: #2A6BB2;
   display: flex;
   gap: 16px; /* space between links */
+    border: 1px solid #2A6BB2;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 .inline-nav-links a {
