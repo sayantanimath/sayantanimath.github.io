@@ -66,7 +66,7 @@ header {
 }
 
 .header-icons {
-    position: relative;
+    position: absolute;
     top: 15px;
     right: 20px;
     display: flex;
@@ -94,7 +94,7 @@ header {
 }
 
 .clock {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 5px;
     font-family: monospace;
     text-align: right;
@@ -120,6 +120,25 @@ footer {
     height: 90%; /* Default size: 90% of the header height */
 }
 @media (max-width: 700px) {
+
+.header-icons {
+    top: 10px;
+    right: 10px;
+    flex-direction: row;       /* icons + clock go side-by-side */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .clock {
+    font-size: 0.8rem;
+  }
+
+  header h1 {
+    font-size: 26px;
+    text-align: center;
+    margin-top: 60px; /* Push title down to avoid overlap */
+  }
+    
   .favicon {
     position: absolute;
     top: 0px;
@@ -300,23 +319,7 @@ ul li {
 
 @media (max-width: 768px) {
 
-.header-icons {
-    top: 10px;
-    right: 10px;
-    flex-direction: row;       /* icons + clock go side-by-side */
-    align-items: center;
-    gap: 10px;
-  }
 
-  .clock {
-    font-size: 0.75rem;
-  }
-
-  header h1 {
-    font-size: 26px;
-    text-align: center;
-    margin-top: 60px; /* Push title down to avoid overlap */
-  }
     
   .floating-body {
     flex-direction: column;
