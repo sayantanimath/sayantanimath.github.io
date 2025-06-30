@@ -382,7 +382,7 @@ ul li {
 .main-content {
   max-width: 1000px;   /* You can adjust: try 800px, 1000px, etc. */
   margin: 0 auto;     /* Horizontally center */
-  padding: 20px;      /* Adds inner spacing */
+  padding: 12px;      /* Adds inner spacing */
 }
 
 @media (min-width: 768px) {
