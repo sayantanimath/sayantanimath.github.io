@@ -2,7 +2,7 @@ body {
     font-family: "Trebuchet MS", sans-serif; /* Use Times New Roman */
     margin: 0;
     padding: 0;
-    background-color:  #d0e2f5;
+    background-color:  #e1ecf7;
     height: 100%;
 }
 
@@ -35,7 +35,7 @@ body {
 
 /* Blog Post Styles */
 .blog-post {
-    background: #d0e2f5;
+    background: #e1ecf7;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin: 20px 20px; /* Center-align in mobile view */
@@ -57,7 +57,7 @@ header {
     position: relative; /* Ensure positioning context */
     /*background-color: #40162F;
     color: #fff;--> */
-    background: linear-gradient(to top, #d0e2f5, #b7d1ed, #8cbaed);
+    background: linear-gradient(to top, #e1ecf7, #d0e2f5, #8cbaed);
     color: white;
     padding: 15px 20px;
     text-align: center;
@@ -99,7 +99,7 @@ header {
 
 footer {
     position: relative; /* Ensure positioning context */
-    background: linear-gradient(to bottom, #d0e2f5, #b7d1ed, #8cbaed);
+    background: linear-gradient(to bottom, #e1ecf7, #d0e2f5, #8cbaed);
     color: white;
     padding: 20px 30px;
     text-align: center;
@@ -219,14 +219,14 @@ nav ul li a:hover {
     padding: 20px;
     text-align: left;
     font-family: "Times New Roman", Times, serif; /* Use Times New Roman */
-    background-color: #d0e2f5;
+    background-color: #e1ecf7;
 }
 
 
 
 .cloud {
     width: 90% !important; /* Forcefully set width to 90% of the screen width */
-    background-color: #d0e2f5;
+    background-color: #e1ecf7;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Increased spread radius and adjusted transparency */
@@ -317,7 +317,7 @@ ul li {
   justify-content: center;
   align-items: center;
   padding: 40px 5%;
-    background-color: #d0e2f5;
+    background-color: #e1ecf7;
   width: 100%;
   box-sizing: border-box;
 }
