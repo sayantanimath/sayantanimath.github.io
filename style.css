@@ -329,16 +329,16 @@ ul li {
 
 .left-column {
   flex: 1;
-  max-width: 35%;
+  max-width: 40%;
   display: flex;
   justify-content: center;
 }
 
 .profile-pic {
   width: 100%;
-  max-width: 275px;
+  max-width: 300px;
   height: auto;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -351,7 +351,7 @@ ul li {
 .right-column h2 {
   margin-top: 0;
     color: #65A2E6;
-  font-size: 26px;
+  font-size: 29px;
 }
 
 .inline-nav-links {
