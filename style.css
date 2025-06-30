@@ -98,10 +98,10 @@ header {
 
 .section-divider {
   border: none;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #ccc, transparent);
+  height: 2px;
+  background-color: #2A6BB2; 
   margin: 40px auto;
-  width: 70%;
+  width: 80%;
 }
 
 footer {
@@ -257,6 +257,7 @@ nav ul li a:hover {
     background-color: transparent;
     color: #2A6BB2;
     border-radius: 5px; /* Set a default radius if you want */
+    padding-left: 10px;
 }
 
 .navcloud:hover {
