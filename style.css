@@ -248,7 +248,7 @@ nav ul li a:hover {
     border-bottom: 2px solid transparent;
     transition: background-color 0.3s ease, color 0.3s ease; /* ONLY animate colors */
     background-color: transparent;
-    color: white;
+    color: #2A6BB2;
     border-radius: 5px; /* Set a default radius if you want */
 }
 
