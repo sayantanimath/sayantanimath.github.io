@@ -243,24 +243,21 @@ nav ul li a:hover {
 }
 
 .navcloud {
-    width: fit-content+10px; /* Ensures it wraps around the content */
-    height: auto + 5px;
-    display: inline-block; /* Allows it to wrap around content */
+    display: inline-block;
     padding: 8px 14px;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease; /* ONLY animate colors */
+    background-color: transparent;
+    color: white;
+    border-radius: 5px; /* Set a default radius if you want */
 }
 
 .navcloud:hover {
     background-color: #2A6BB2;
     color: #FFFFFF;
     cursor: pointer;
-    width: fit-content+10px; /* Ensures it wraps around the content */
-    height: auto + 5px;
-    padding: 5px; /* Adjust padding as needed */
-    border-radius: 10%; /* Makes it round */
-    display: inline-block; /* Allows it to wrap around content */
     border-bottom: 2px solid #A4C7F3;
+    /* No padding, width, height, or border-radius changes here */
 }
 
 .download-cv {
