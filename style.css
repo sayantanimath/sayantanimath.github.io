@@ -379,6 +379,18 @@ ul li {
   background-color: #eaf3fc;
 }
 
+.main-content {
+  max-width: 900px;   /* You can adjust: try 800px, 1000px, etc. */
+  margin: 0 auto;     /* Horizontally center */
+  padding: 20px;      /* Adds inner spacing */
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    max-width: 900px;
+  }
+}
+
 @media (min-height: 500px) {
   .back-to-top {
     display: block;
