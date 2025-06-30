@@ -96,6 +96,13 @@ header {
     transform: scale(1.2);
 }
 
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 40px auto;
+  width: 70%;
+}
 
 footer {
     position: relative; /* Ensure positioning context */
