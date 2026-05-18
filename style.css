@@ -242,6 +242,22 @@ nav ul li a:hover {
     margin: 15px auto;
 }
 
+.square-text-block {
+    width: 90%; /* Adjust this value to set the width of your square */
+    background-color: #e1ecf7;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    text-justify: inter-word; /* Improves spacing between words on justified lines */
+    /* Hyphenation rules */
+    hyphens: auto;
+    word-break: break-word; /* Prevents text from breaking out if it cannot hyphenate */
+    overflow-wrap: break-word;
+    margin: 15px auto;
+}
+
+
 .content,
 .floating-body,
 .cloud {
