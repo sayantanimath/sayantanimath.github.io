@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f8fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-button {
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: #4a7bb7;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .portfolio-button:hover {
+            background-color: #345d8c;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome Reader!</h1>
+        <p>This is my art gallery.</p>
+
+        <div class="button-container">
+            <a href="art.html" class="portfolio-button">ART</a>
+            <a href="photography.html" class="portfolio-button">PHOTOGRAPHY</a>
+        </div>
+    </div>
+</body>
+</html>
