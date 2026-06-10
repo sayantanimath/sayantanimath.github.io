@@ -2,12 +2,7 @@ body {
     font-family: "Trebuchet MS", sans-serif; /* Use Times New Roman */
     margin: 0;
     padding: 0;
-    /*background-color:  #e1ecf7;*/
-    background-image: url("pages/IMG_2778.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color:  #e1ecf7;
     height: 100%;
 }
 
