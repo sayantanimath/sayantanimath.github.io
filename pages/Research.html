@@ -55,9 +55,10 @@
             gap: 4px 28px;
             background: none !important;
         }
-        nav a {
+        nav a,
+        nav a:visited {
             text-decoration: none;
-            color: var(--accent);
+            color: var(--accent) !important;
         }
         .navcloud {
             background: none !important;
@@ -85,6 +86,12 @@
         /* Research content */
         .research {
             padding: 40px 0 0;
+        }
+        /* flow-root makes each section contain its floated image,
+           so the next heading and line start below it */
+        .research section,
+        .research li > div {
+            display: flow-root;
         }
         .research h2 {
             font-family: Georgia, "Times New Roman", serif;
@@ -289,7 +296,7 @@
             </figure>
             (with J. D. Clifton, Z. Walsh) The unbreakable quasi-graphic matroids
 
-            <p><a href="https://arxiv.org/pdf/2605.12811">arXiv</a> <a href="/pages/Unbreakable_Frame_and_Lift_Matroids.pdf" target="_blank" class="button">Presentation PDF</a></p>
+            <p><a href="https://arxiv.org/pdf/2605.12811" target="_blank" class="button">arXiv</a> <a href="/pages/Unbreakable_Frame_and_Lift_Matroids.pdf" target="_blank" class="button">Presentation PDF</a></p>
           </div>
         </li>
       </ul>
