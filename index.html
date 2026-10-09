@@ -111,15 +111,21 @@
             text-align: left;
             margin: 0 0 20px;
         }
-        .right-column p {
-            margin: 0 0 16px;
-            color: var(--text);
-            text-align: justify;
-			text-justify: inter-word;
-            hyphens: none;
-            word-break: normal;
-			text-wrap: pretty;
-        }
+      .right-column p {
+    margin: 0 0 16px;
+    color: var(--text);
+    text-align: left;
+    hyphens: none;
+    word-break: normal;
+}
+
+@media (min-width: 721px) {
+    .right-column p {
+        text-align: justify;
+        text-justify: inter-word;
+        text-wrap: pretty;
+    }
+}
         .right-column a {
             color: var(--accent);
             font-weight: 600;
