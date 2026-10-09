@@ -356,6 +356,114 @@
     </nav>
   </header>
 
+	<!-- Under Construction Banner -->
+<div class="construction-banner">
+    <div class="robot-crew">
+        <span>🤖</span>
+        <span>⊂(◉‿◉)つ</span>
+        <span>🤖</span>
+    </div>
+
+    <h1>⚙ UNDER CONSTRUCTION ⚙</h1>
+
+    <p>Beep boop! Our little bots are building something cool.</p>
+    <p class="status">STATUS: <span>LOADING CREATIVITY...</span></p>
+
+    <div class="progress-track">
+        <div class="progress-fill"></div>
+    </div>
+
+    <p class="footer-message">
+        Please check back soon! &lt;3
+    </p>
+</div>
+
+<style>
+.construction-banner {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    color: #2A6BB2;
+    border: 2px dashed #8cbaed;
+    background: #f5f9ff;
+}
+
+.robot-crew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.robot-crew span {
+    display: inline-block;
+    animation: bob 1.5s ease-in-out infinite alternate;
+}
+
+.robot-crew span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.construction-banner h1 {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    letter-spacing: 2px;
+}
+
+.construction-banner p {
+    line-height: 1.6;
+}
+
+.status span {
+    animation: blink 1s steps(2, start) infinite;
+}
+
+.progress-track {
+    width: 80%;
+    height: 14px;
+    margin: 20px auto;
+    border: 1px solid #2A6BB2;
+    padding: 2px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 70%;
+    background: #8cbaed;
+    animation: loading 3s ease-in-out infinite alternate;
+}
+
+.footer-message {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+@keyframes bob {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-8px); }
+}
+
+@keyframes blink {
+    to { visibility: hidden; }
+}
+
+@keyframes loading {
+    from { width: 15%; }
+    to   { width: 90%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .robot-crew span,
+    .status span,
+    .progress-fill {
+        animation: none;
+    }
+}
+</style>
+
   <div class="misc">
     <h1>Misc</h1>
       <div class="jump">
