@@ -394,6 +394,7 @@ ul li {
 .inline-nav-links a:hover {
   background-color: #eaf3fc;
 }
+.right-column p { text-align: left; }
 
 .main-content {
   max-width: 1000px;   /* You can adjust: try 800px, 1000px, etc. */
