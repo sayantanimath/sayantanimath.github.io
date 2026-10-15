@@ -277,14 +277,21 @@
             line-height: 1.2;
             font-weight: 500;
             color: var(--accent);
-            text-align: center;
             margin: 0 0 28px;
+			display: block !important;
+    		text-align: center !important;
         }
 		.contact h1::before,  .contact h1::after {
-    content: "•";
-    font-size: 0.5em;
-    line-height: 1;
-    color: var(--accent);
+    content: "";
+    display: inline-block;
+    width: 0.2em;
+    height: 0.2em;
+    border-radius: 50%;
+    background: var(--accent);
+    vertical-align: middle;
+    margin: 0 0.4em;
+    position: relative;
+    top: -0.05em;
 }
         .contact-columns {
             display: flex;
@@ -348,15 +355,21 @@
             line-height: 1.2;
             font-weight: 500;
             color: var(--accent);
-            text-align: center;
-            margin: 0 0 32px;
+            margin: 0 0 28px;
+			display: block !important;
+    		text-align: center !important;
         }
-
 		.research h1::before,  .research h1::after {
-    content: "•";
-    font-size: 0.5em;
-    line-height: 1;
-    color: var(--accent);
+    content: "";
+    display: inline-block;
+    width: 0.2em;
+    height: 0.2em;
+    border-radius: 50%;
+    background: var(--accent);
+    vertical-align: middle;
+    margin: 0 0.4em;
+    position: relative;
+    top: -0.05em;
 }
         /* flow-root makes each section contain its floated image,
            so the next heading and line start below it */
@@ -448,15 +461,21 @@
             line-height: 1.2;
             font-weight: 500;
             color: var(--accent);
-            text-align: center;
-            margin: 0 0 32px;
+            margin: 0 0 28px;
+			display: block !important;
+    		text-align: center !important;
         }
-
 		.teaching h1::before,  .teaching h1::after {
-    content: "•";
-    font-size: 0.5em;
-    line-height: 1;
-    color: var(--accent);
+    content: "";
+    display: inline-block;
+    width: 0.2em;
+    height: 0.2em;
+    border-radius: 50%;
+    background: var(--accent);
+    vertical-align: middle;
+    margin: 0 0.4em;
+    position: relative;
+    top: -0.05em;
 }
         .teaching h2 {
             font-family: Georgia, "Times New Roman", serif;
