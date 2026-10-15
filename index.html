@@ -50,16 +50,23 @@
         }
         /* Theme switch button (sits at the end of the icon row) */
         .theme-toggle {
+            all: unset;
+            box-sizing: border-box;
+            display: block !important;
+            width: 24px !important;
+            height: 24px !important;
+            min-width: 0 !important;
+            min-height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
             background: none !important;
-            border: 0;
-            padding: 0;
-            margin: 0;
-            width: 24px;
-            height: 24px;
+            box-shadow: none !important;
+            position: static !important;
+            float: none !important;
+            line-height: 0 !important;
             cursor: pointer;
             color: var(--accent);
-            display: block;
-            line-height: 0;
             -webkit-tap-highlight-color: transparent;
         }
         .theme-toggle:hover { opacity: 0.75; }
@@ -182,6 +189,8 @@
         }
         header ul.social { gap: 16px !important; }
         header nav { gap: 4px 28px !important; }
+        header ul.social { align-items: center !important; }
+        header ul.social li { display: flex !important; align-items: center; height: 24px; }
         header ul.social li a { display: block; line-height: 0; }
 
         /* Shared divider between sections */
@@ -633,18 +642,13 @@
     <div class="right-column">
       <h1>Sayantani Bhattacharya</h1>
       <p>
-        Hi! I'm currently a fourth year Ph.D. student in Mathematics at <a href="https://cosam.auburn.edu/directory/profile.php?id=szb0261">Auburn University</a>, Alabama, USA. My advisor is <a href="https://webhome.auburn.edu/~zww0009/">Dr. Zach Walsh</a>.
+        Hi! I'm currently a fourth year Ph.D. student in Mathematics at <a href="https://cosam.auburn.edu/directory/profile.php?id=szb0261">Auburn University</a>, Alabama, USA, working on Matroid Theory. My advisor is <a href="https://webhome.auburn.edu/~zww0009/">Dr. Zach Walsh</a>.
         Previously I completed my Masters from <a href="https://www.tezu.ernet.in/dmaths/">Tezpur University</a>, India. My Bachelor Degree was from <a href="https://www.cmi.ac.in">Chennai Mathematical Institute</a>, India,
         where I completed a dual degree in Mathematics and Computer Science.
       </p>
-      <p><b>Research Interest :</b> Matroid Theory, Combinatorics. </p>
-      <details class="more">
-        <summary>More about my research</summary>
-        <!-- EDIT the two paragraphs below in your own words -->
-        <p>Matroids are combinatorial objects that capture the idea of independence in a way that includes linear independence in vector spaces and acyclicity in graphs. I am interested in the structure of matroids and in how it connects to graphs and to matrices over finite fields.</p>
-        <p>Much of my work is on extremal and structural questions, such as how large a matroid in a given class can be, and how the members of a class can be built from simpler pieces.</p>
-      </details>
-      <p>You can find my CV <a href="/pages/CV2.pdf">HERE</a>.</p>
+		<p>My current research interests are Structural Graph Theory and Extremal Matroid Theory. 
+      <p><a href="/pages/CV2.pdf" download="Sayantani_Bhattacharya_CV.pdf" class="cv-button">Download CV</a></p>
+
     </div>
   </div>
 
@@ -676,16 +680,6 @@
     </div>
   </div>
 
-  <!-- Spring 2025 Section 
-
-      <h2 style="color:#65A2E6;">Fall 2025</h2>
-      <p><strong>Office Allocation:</strong> 139E Parker Hall</p>
-      <p><strong>Office Hours (MATH 1610 MERIT CALCULUS I):</strong></p>
-      <ul>
-          <li>Tuesday Thursday 9:30-10:30 AM</li>
-          <li>Monday 11:30-12:30 AM (Advise Assist)</li>
-      </ul>
-  -->
 
   <hr class="section-divider">
 
@@ -702,7 +696,7 @@
             </figure>
             (with J. D. Clifton, Z. Walsh) The unbreakable quasi-graphic matroids
             <!-- EDIT: add 1-3 sentences on the main result -->
-            <p class="desc">Quasi-graphic matroids generalize both frame and lift matroids, which in turn generalize graphic matroids. This paper studies the unbreakable quasi-graphic matroids.</p>
+            <p class="desc">Quasi-graphic matroids generalize both frame and lift matroids, which in turn generalize graphic matroids. This paper studies the unbreakable quasi-graphic matroids. A connected matroid is unbreakable if it remains connected after contracting any flat. The class of quasi-graphic matroids have been structurally studied by <a herf="https://doi.org/10.1016/j.ejc.2019.103062" target="_blank" rel="noopener">Bowler, Funk, Slilaty.</a> </p>
 
             <p><a href="https://arxiv.org/pdf/2605.12811" target="_blank" class="button">arXiv</a> <a href="/pages/Unbreakable_Frame_and_Lift_Matroids.pdf" target="_blank" class="button">Presentation</a></p>
           </div>
@@ -712,8 +706,8 @@
         <li>
           <div style="width: 98%;">
           <b>Ongoing Work : </b>Extremal functions for classes of quaternary matroids
-          <!-- EDIT -->
-          <p class="desc">An extremal function gives the maximum number of elements in a simple matroid of a given rank within a class. I am studying this for classes of matroids representable over the field with four elements.</p>
+          <!-- EDIT 
+          <p class="desc">An extremal function gives the maximum number of elements in a simple matroid of a given rank within a class. I am studying this for classes of matroids representable over the field with four elements.</p>-->
           </div>
         </li>
       </ul>
