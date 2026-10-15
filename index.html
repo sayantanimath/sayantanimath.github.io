@@ -537,10 +537,26 @@
 			header ul.social { justify-content: center; }
 			header nav { justify-content: center; }
 
-			.floating-body { align-items: center; }
-			.profile-pic { margin: 0 auto; }
 			.right-column h1 { text-align: center; }
-			.right-column p { text-align: center; }
+			.floating-body { align-items: center !important; }
+
+				.left-column {
+   				 display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    flex-basis: auto !important;
+    margin: 0 !important;
+    float: none !important;
+}
+
+				.profile-pic {
+    margin: 0 !important;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
 
 
             body { font-size: 17px; }
