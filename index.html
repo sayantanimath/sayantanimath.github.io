@@ -531,6 +531,18 @@
         }
 
         @media (max-width: 720px) {
+			/* Mobile: center the icons, nav, photo and name */
+			header { align-items: center; }
+			.header-icons { align-self: center; }
+			header ul.social { justify-content: center; }
+			header nav { justify-content: center; }
+
+			.floating-body { align-items: center; }
+			.profile-pic { margin: 0 auto; }
+			.right-column h1 { text-align: center; }
+			.right-column p { text-align: center; }
+
+
             body { font-size: 17px; }
             header { flex-direction: column; align-items: flex-start; }
             .header-icons { order: 0; }
