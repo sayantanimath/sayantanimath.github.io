@@ -15,6 +15,9 @@
             --text: #1A1A1A;
             --rule: #D9DEE5;
         }
+        html {
+            scroll-behavior: smooth;
+        }
         html, body {
             background: #ffffff !important;
             background-image: none !important;
@@ -55,9 +58,10 @@
             gap: 4px 28px;
             background: none !important;
         }
-        nav a {
+        nav a,
+        nav a:visited {
             text-decoration: none;
-            color: var(--accent);
+            color: var(--accent) !important;
         }
         .navcloud {
             background: none !important;
@@ -82,7 +86,16 @@
         .icon-small { width: 24px; height: 24px; display: block; }
         .social a:hover { opacity: 0.75; }
 
-        /* Body */
+        /* Shared divider between sections */
+        hr.section-divider {
+            border: 0;
+            border-top: 1px solid var(--rule);
+            height: 0;
+            margin: 0;
+            background: none !important;
+        }
+
+        /* ---------- Home ---------- */
         .floating-body {
             display: flex;
             align-items: center;
@@ -111,21 +124,20 @@
             text-align: left;
             margin: 0 0 20px;
         }
-      .right-column p {
-    margin: 0 0 16px;
-    color: var(--text);
-    text-align: left;
-    hyphens: none;
-    word-break: normal;
-}
-
-@media (min-width: 721px) {
-    .right-column p {
-        text-align: justify;
-        text-justify: inter-word;
-        text-wrap: pretty;
-    }
-}
+        .right-column p {
+            margin: 0 0 16px;
+            color: var(--text);
+            text-align: left;
+            hyphens: none;
+            word-break: normal;
+        }
+        @media (min-width: 721px) {
+            .right-column p {
+                text-align: justify;
+                text-justify: inter-word;
+                text-wrap: pretty;
+            }
+        }
         .right-column a {
             color: var(--accent);
             font-weight: 600;
@@ -138,21 +150,231 @@
             text-decoration-color: var(--accent-dark);
         }
 
-        hr.section-divider {
-            border: 0;
-            border-top: 1px solid var(--rule);
-            height: 0;
+        /* ---------- Contact ---------- */
+        .contact {
+            padding: 48px 0 48px;
+        }
+        .contact h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.4rem;
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--accent);
+            text-align: left;
+            margin: 0 0 28px;
+        }
+        .contact-columns {
+            display: flex;
+            align-items: flex-start;
+            gap: 48px;
+        }
+        .contact-info { flex: 0 0 42%; min-width: 0; }
+        .contact-photo { flex: 1; min-width: 0; }
+        .contact h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent) !important;
+            margin: 0 0 10px;
+        }
+        .contact .subparagraph {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text);
             margin: 0;
-            background: none !important;
+        }
+        .contact p {
+            margin: 0 0 12px;
+            color: var(--text);
+            text-align: left;
+        }
+        .contact figure { margin: 0; }
+        .contact figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid var(--rule);
+            border-radius: 8px;
+        }
+        .contact figcaption {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #555555;
+            text-align: left;
+        }
+
+        /* ---------- Research ---------- */
+        .research {
+            padding: 48px 0 48px;
+        }
+        .research h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.4rem;
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--accent);
+            text-align: left;
+            margin: 0 0 32px;
+        }
+        /* flow-root makes each section contain its floated image,
+           so the next heading and line start below it */
+        .research section,
+        .research li > div {
+            display: flow-root;
+        }
+        .research h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.6rem;
+            line-height: 1.25;
+            font-weight: 700;
+            color: var(--accent) !important;
+            margin: 0 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--rule);
+        }
+        .research section + section { margin-top: 56px; }
+        .research h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent) !important;
+            margin: 0 0 16px;
+        }
+        .research ul { margin: 0; padding-left: 22px; }
+        .research li { margin: 0 0 12px; }
+        .research p { margin: 12px 0 0; }
+        .research figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .research a:not(.button) {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: rgba(23, 55, 94, 0.35);
+            text-underline-offset: 3px;
+        }
+        .research a:not(.button):hover {
+            color: var(--accent-dark);
+            text-decoration-color: var(--accent-dark);
+        }
+        .research a.button {
+            display: inline-block;
+            padding: 6px 16px;
+            margin: 0 8px 8px 0;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.4;
+            text-decoration: none;
+            color: var(--accent);
+            background: #ffffff;
+            border: 1.5px solid var(--accent);
+            border-radius: 6px;
+            box-shadow: none;
+        }
+        .research a.button:hover {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        /* ---------- Teaching ---------- */
+        .teaching {
+            padding: 48px 0 48px;
+        }
+        .teaching h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.4rem;
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--accent);
+            text-align: left;
+            margin: 0 0 32px;
+        }
+        .teaching h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.6rem;
+            line-height: 1.25;
+            font-weight: 700;
+            color: var(--accent) !important;
+            margin: 0 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--rule);
+        }
+        .teaching ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+        .teaching li {
+            margin: 0 0 14px;
+        }
+        .teaching li b { color: var(--accent-dark); }
+        .teaching a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: rgba(23, 55, 94, 0.35);
+            text-underline-offset: 3px;
+        }
+        .teaching a:hover {
+            color: var(--accent-dark);
+            text-decoration-color: var(--accent-dark);
+        }
+
+        /* ---------- Links to Notes / Misc pages ---------- */
+        .more-pages {
+            padding: 40px 0 0;
+        }
+        .more-pages p {
+            margin: 0 0 10px;
+        }
+        .more-pages a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: rgba(23, 55, 94, 0.35);
+            text-underline-offset: 3px;
+        }
+        .more-pages a:hover {
+            color: var(--accent-dark);
+            text-decoration-color: var(--accent-dark);
         }
 
         @media (max-width: 720px) {
             body { font-size: 17px; }
             header { flex-direction: column; align-items: flex-start; }
             .header-icons { order: 0; }
+
             .floating-body { flex-direction: column; align-items: flex-start; gap: 28px; padding-top: 32px; }
             .left-column { flex-basis: auto; }
             .right-column h1 { font-size: 2rem; }
+
+            .contact { padding-top: 32px; }
+            .contact h1 { font-size: 2rem; }
+            .contact-columns { flex-direction: column; gap: 28px; }
+            .contact-info { flex-basis: auto; }
+
+            .research { padding-top: 32px; }
+            .research h1 { font-size: 2rem; }
+            .research h2 { font-size: 1.4rem; }
+            .research li > div {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+            }
+            .research li > div figure {
+                display: none !important;
+                float: none !important;
+                order: 2;
+                width: 65% !important;
+                max-width: 280px;
+                min-width: 0 !important;
+                margin: 16px auto 0 !important;
+            }
+
+            .teaching { padding-top: 32px; }
+            .teaching h1 { font-size: 2rem; }
+            .teaching h2 { font-size: 1.4rem; }
         }
     </style>
 
@@ -172,7 +394,7 @@
     </script>
 </head>
 <body>
-<div class="main-content">
+<div class="main-content" id="home">
   <header>
     <a href="/index.html" align="left"></a>
 
@@ -274,15 +496,16 @@
     </div>
 
     <nav>
-      <a href="/index.html"><div class="navcloud"><b>Home</b></div></a>
-      <a href="/pages/Contact.html"><div class="navcloud"><b>Contact</b></div></a>
-      <a href="/pages/Research.html"><div class="navcloud"><b>Research</b></div></a>
-      <a href="/pages/Teaching.html"><div class="navcloud"><b>Teaching</b></div></a>
+      <a href="#home"><div class="navcloud"><b>Home</b></div></a>
+      <a href="#contact"><div class="navcloud"><b>Contact</b></div></a>
+      <a href="#research"><div class="navcloud"><b>Research</b></div></a>
+      <a href="#teaching"><div class="navcloud"><b>Teaching</b></div></a>
       <a href="/pages/Coursework.html"><div class="navcloud"><b>Notes</b></div></a>
       <a href="/pages/Portfolio.html"><div class="navcloud"><b>Misc</b></div></a>
     </nav>
   </header>
 
+  <!-- ===== HOME ===== -->
   <div class="floating-body">
     <div class="left-column">
       <img src="/pages/IMG20231213143824_Original.jpeg" alt="Sayantani Bhattacharya" class="profile-pic">
@@ -300,6 +523,105 @@
   </div>
 
   <hr class="section-divider">
+
+  <!-- ===== CONTACT ===== -->
+  <div class="contact" id="contact">
+    <h1>Contact</h1>
+    <div class="contact-columns">
+      <!-- Left Column: Department Address and Emails -->
+      <div class="contact-info">
+        <h2>Address</h2>
+        <div class="subparagraph">Department of Mathematics and Statistics</div>
+        <div class="subparagraph">203 Extension Hall,</div>
+        <div class="subparagraph">Auburn University, AL, 36849</div>
+        <div class="subparagraph">USA</div>
+        <br>
+        <p><strong>Work Email:</strong> szb0261@auburn.edu</p>
+        <p><strong>Personal Email:</strong> math.sayantani@gmail.com</p>
+      </div>
+
+      <!-- Right Column: Image -->
+      <div class="contact-photo">
+        <figure>
+          <img src="/pages/IMG_0704.png" alt="Parker Hall">
+          <figcaption>Parker Hall: by me</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spring 2025 Section 
+
+      <h2 style="color:#65A2E6;">Fall 2025</h2>
+      <p><strong>Office Allocation:</strong> 139E Parker Hall</p>
+      <p><strong>Office Hours (MATH 1610 MERIT CALCULUS I):</strong></p>
+      <ul>
+          <li>Tuesday Thursday 9:30-10:30 AM</li>
+          <li>Monday 11:30-12:30 AM (Advise Assist)</li>
+      </ul>
+  -->
+
+  <hr class="section-divider">
+
+  <!-- ===== RESEARCH ===== -->
+  <div class="research" id="research">
+    <h1>Research</h1>
+    <section>
+      <h2>PhD Work</h2>
+      <ul>
+        <li>
+          <div style="width: 98%;">
+            <figure style="float: right; margin: 0 10px 10px 15px; text-align: center; width: 22%; min-width: 110px;">
+              <img src="/pages/3connected%20unbreakable.pdf" alt="">
+            </figure>
+            (with J. D. Clifton, Z. Walsh) The unbreakable quasi-graphic matroids
+
+            <p><a href="https://arxiv.org/pdf/2605.12811" target="_blank" class="button">arXiv</a> <a href="/pages/Unbreakable_Frame_and_Lift_Matroids.pdf" target="_blank" class="button">Presentation PDF</a></p>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div style="width: 98%;">
+          <b>Ongoing Work : </b>Extremal functions for classes of quaternary matroids
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Masters Thesis</h2>
+      <h3>Topic: An Introduction to Manifolds</h3>
+      <a href="/pages/MT.pdf" target="_blank" class="button">Masters Thesis PDF</a> <a href="/pages/M_Sc_Presentation_Manifolds.pdf" target="_blank" class="button">Presentation PDF</a>
+    </section>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ===== TEACHING ===== -->
+  <div class="teaching" id="teaching">
+    <h1>Teaching Experience:</h1>
+    <h2>Auburn University</h2>
+    <ul>
+      <li><b>Fall 2026: </b>Recitation Leader for MATH 2630 Calculus III. </li>
+      <li><b>Spring 2026: </b>Recitation Leader for MATH 1620 Calculus II. <a href="https://auburn.box.com/s/9do9c3caecmgheq5z7ksrf4p23vpat7y">[box folder link]</a></li>
+      <li><b>Fall 2025: </b>Recitation Leader for MATH 1610/1950 MERIT Calculus I. </li>
+      <li><b>Summer 2025: </b>Graduate Research Assistant under <a href="https://www.auburn.edu/cosam/faculty/math_stats/lanius/index.htm">Dr. Melinda Lanius</a> for MATH 1610/1950 MERIT Calculus I.</li>
+      <li><b>Spring 2025: </b>Recitation Leader for MATH 1610 Calculus I Section R15, R16.</li>
+      <li><b>Fall 2024: </b>Instructor of Record for MATH 1000 College Algebra Section 005, 006.</li>
+      <li><b>Summer 2024: </b>MATH Tutoring Center GTA for MATH 1000/1120/30/50 &amp; 2650.</li>
+      <li><b>Spring 2024: </b>Grader for MATH 1610, 1617 Calculus I.</li>
+      <li><b>Fall 2023: </b>Grader for MATH 2650 Linear Differential Equations.</li>
+    </ul>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ===== NOTES & MISC (separate pages) ===== -->
+  <div class="more-pages">
+    <p>Looking for my coursework notes? Go to <a href="/pages/Coursework.html">Notes</a>.</p>
+    <p>Looking for my miscellaneous projects and other things? Go to <a href="/pages/Portfolio.html">Misc</a>.</p>
+  </div>
 </div>
 </body>
 </html>
