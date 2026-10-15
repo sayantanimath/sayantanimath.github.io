@@ -73,6 +73,33 @@
             border-bottom: 2px solid transparent;
         }
 
+        /* Nav items never change in any state (hover / tap / focus / active) */
+        nav a,
+        nav a:hover,
+        nav a:focus,
+        nav a:focus-visible,
+        nav a:active,
+        nav a:visited {
+            background: none !important;
+            color: var(--accent) !important;
+            text-decoration: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+        nav a .navcloud,
+        nav a:hover .navcloud,
+        nav a:focus .navcloud,
+        nav a:focus-visible .navcloud,
+        nav a:active .navcloud {
+            background: none !important;
+            box-shadow: none !important;
+            border-bottom: 2px solid transparent !important;
+            color: var(--accent) !important;
+            outline: none !important;
+            transform: none !important;
+        }
+
         .header-icons { order: 2; background: none !important; }
         .social {
             display: flex;
@@ -84,6 +111,24 @@
         .social li { margin: 0; padding: 0; }
         .icon-small { width: 24px; height: 24px; display: block; }
         .social a:hover { opacity: 0.75; }
+
+        /* Alignment fix: remove stray margins/padding (from style.css) so
+           icons, nav links and page content all start on the same left edge */
+        header nav,
+        header .header-icons,
+        header ul.social,
+        header ul.social li,
+        header nav a {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        header nav a .navcloud {
+            margin: 0 !important;
+            padding: 6px 0 !important;
+        }
+        header ul.social { gap: 16px !important; }
+        header nav { gap: 4px 28px !important; }
+        header ul.social li a { display: block; line-height: 0; }
 
         /* Shared divider between sections */
         hr.section-divider {
@@ -346,9 +391,13 @@
             body { font-size: 17px; }
             header { flex-direction: column; align-items: flex-start; }
             .header-icons { order: 0; }
+            header { gap: 8px 0; padding-top: 16px; }
+            header nav { gap: 0 18px !important; flex-wrap: nowrap !important; }
+            header nav a .navcloud { font-size: 16px; white-space: nowrap; }
 
             .floating-body { flex-direction: column; align-items: flex-start; gap: 28px; padding-top: 32px; }
-            .left-column { flex-basis: auto; }
+            .left-column { flex-basis: auto; width: 100%; }
+            .profile-pic { width: 100%; max-width: 320px; height: auto; aspect-ratio: 1 / 1; margin: 0 auto; }
             .right-column h1 { font-size: 2rem; }
 
             .contact { padding-top: 32px; }
