@@ -55,8 +55,7 @@
             order: 1;
             display: flex;
             flex-wrap: wrap;
-            gap: 4px 8px;
-            margin-left: -12px; /* keeps "Home" lined up with the text below */
+            gap: 4px 28px;
             background: none !important;
         }
         nav a,
@@ -67,20 +66,11 @@
         .navcloud {
             background: none !important;
             box-shadow: none !important;
-            border-radius: 6px;
-            padding: 6px 12px;
+            border-radius: 0;
+            padding: 6px 0;
             font-size: 17px;
             font-weight: 600;
-            border-bottom: none;
-        }
-        /* Dark box on the active item */
-        nav a.active .navcloud { background: var(--accent) !important; }
-        nav a.active,
-        nav a.active:visited { color: #ffffff !important; }
-        /* Hover only on devices that really hover (so it doesn't stick on touch screens) */
-        @media (hover: hover) {
-            nav a:hover .navcloud { background: var(--accent) !important; }
-            nav a:hover { color: #ffffff !important; }
+            border-bottom: 2px solid transparent;
         }
 
         .header-icons { order: 2; background: none !important; }
@@ -633,25 +623,5 @@
     <p>Also check out my other projects, hobbies, and other things here : <a href="/pages/Portfolio.html">Miscellaneous</a>.</p>
   </div>
 </div>
-<script>
-(function () {
-  const links = document.querySelectorAll('nav a[href^="#"]');
-  const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
-
-  function setActive(id) {
-    links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
-  }
-
-  links.forEach(a => a.addEventListener('click', () => setActive(a.getAttribute('href').slice(1))));
-
-  window.addEventListener('scroll', () => {
-    let current = 'home';
-    sections.forEach(s => { if (s && s.getBoundingClientRect().top <= 120) current = s.id; });
-    setActive(current);
-  }, { passive: true });
-
-  setActive('home');
-})();
-</script>
 </body>
 </html>
