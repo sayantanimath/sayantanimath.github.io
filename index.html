@@ -315,6 +315,18 @@
             color: var(--text);
             text-align: left;
         }
+		.contact p a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--link-line);
+    text-underline-offset: 3px;
+}
+.contact p a:hover {
+    color: var(--accent-dark);
+    text-decoration-color: var(--accent-dark);
+}
+
         .contact figure { margin: 0; }
         .contact figure img {
             width: 100%;
@@ -751,8 +763,8 @@
         <div class="subparagraph">Auburn University, AL, 36849</div>
         <div class="subparagraph">USA</div>
         <br>
-        <p><strong>Work Email:</strong> szb0261@auburn.edu</p>
-        <p><strong>Personal Email:</strong> math.sayantani@gmail.com</p>
+		  <p><strong>Work Email:</strong> <a href="mailto:szb0261@auburn.edu">szb0261@auburn.edu</a></p>
+<p><strong>Personal Email:</strong> <a href="mailto:math.sayantani@gmail.com">math.sayantani@gmail.com</a></p>
       </div>
 
       <!-- Right Column: Image -->
