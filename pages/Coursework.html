@@ -5,18 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes | Sayantani Bhattacharya</title>
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
     <link rel="stylesheet" href="/style.css">
 
     <!-- Design overrides (same as index.html) -->
     <style>
         :root {
+            color-scheme: light dark;
+            --bg: #ffffff;
             --accent: #17375E;
             --accent-dark: #0B1F3A;
             --text: #1A1A1A;
+            --muted: #4A5568;
             --rule: #D9DEE5;
+            --link-line: rgba(23, 55, 94, 0.35);
         }
+        /* Dark mode: follows the device setting unless the visitor picked Light or Dark */
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #0F1620;
+                --accent: #8FB4E8;
+                --accent-dark: #BBD3F5;
+                --text: #E4E8EE;
+                --muted: #9AA5B4;
+                --rule: #2A3441;
+                --link-line: rgba(143, 180, 232, 0.4);
+            }
+        }
+        :root[data-theme="light"] { color-scheme: light; }
+        :root[data-theme="dark"] {
+            color-scheme: dark;
+            --bg: #0F1620;
+            --accent: #8FB4E8;
+            --accent-dark: #BBD3F5;
+            --text: #E4E8EE;
+            --muted: #9AA5B4;
+            --rule: #2A3441;
+            --link-line: rgba(143, 180, 232, 0.4);
+        }
+        /* Theme switch button, upper right corner */
+        .theme-corner {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            z-index: 10;
+        }
+        .theme-toggle {
+            all: unset;
+            box-sizing: border-box;
+            display: block !important;
+            width: 24px !important;
+            height: 24px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            background: none !important;
+            line-height: 0 !important;
+            cursor: pointer;
+            color: var(--accent);
+            -webkit-tap-highlight-color: transparent;
+        }
+        .theme-toggle:hover { opacity: 0.75; }
+        .theme-toggle svg { width: 24px; height: 24px; display: block; }
         html, body {
-            background: #ffffff !important;
+            background: var(--bg) !important;
             background-image: none !important;
         }
         body {
@@ -30,12 +87,13 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 24px 48px;
-            background: #ffffff !important;
+            background: var(--bg) !important;
+            position: relative;
         }
 
         /* Header */
         header {
-            background: #ffffff !important;
+            background: var(--bg) !important;
             background-image: none !important;
             display: flex;
             flex-wrap: wrap;
@@ -85,11 +143,11 @@
 
         /* Notes content */
         .notes {
-            padding: 40px 0 0;
+            padding: 64px 0 0;
         }
         .notes .updated {
             margin: 0 0 32px;
-            color: #4A5568;
+            color: var(--muted);
         }
         .notes h1 {
             font-family: Georgia, "Times New Roman", serif;
@@ -132,7 +190,7 @@
             color: var(--accent);
             font-weight: 600;
             text-decoration: underline;
-            text-decoration-color: rgba(23, 55, 94, 0.35);
+            text-decoration-color: var(--link-line);
             text-underline-offset: 3px;
         }
         .notes a:hover {
@@ -144,7 +202,7 @@
             body { font-size: 17px; }
             header { flex-direction: column; align-items: flex-start; }
             .header-icons { order: 0; }
-            .notes { padding-top: 28px; }
+            .notes { padding-top: 60px; }
             .notes h1 { font-size: 2rem; }
             .notes h2 { font-size: 1.25rem; }
         }
@@ -167,6 +225,9 @@
 </head>
 <body>
 <div class="main-content">
+  <div class="theme-corner">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
+  </div>
 
 
   <div class="notes">
@@ -205,5 +266,40 @@
     <hr class="section-divider">
   </div>
 </div>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  var order = ['auto', 'light', 'dark'];
+  var labels = { auto: 'Theme: match device (click to change)', light: 'Theme: light (click to change)', dark: 'Theme: dark (click to change)' };
+  var icons = {
+    auto: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>',
+    light: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></svg>',
+    dark: '<svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>'
+  };
+
+  function current() {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    return (t === 'light' || t === 'dark') ? t : 'auto';
+  }
+  function apply(mode) {
+    if (mode === 'auto') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', mode);
+    btn.innerHTML = icons[mode];
+    btn.title = labels[mode];
+    btn.setAttribute('aria-label', labels[mode]);
+  }
+  btn.addEventListener('click', function () {
+    var next = order[(order.indexOf(current()) + 1) % order.length];
+    try {
+      if (next === 'auto') localStorage.removeItem('theme');
+      else localStorage.setItem('theme', next);
+    } catch (e) {}
+    apply(next);
+  });
+  apply(current());
+})();
+</script>
 </body>
 </html>
