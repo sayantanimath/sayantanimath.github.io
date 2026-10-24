@@ -1,486 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources | Sayantani Bhattacharya</title>
-  <link rel="icon" href="/IMG_1657.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Sayantani Bhattacharya</title>
+	 <link rel="icon" href="/IMG_1657.png" type="image/png">
+    <script>
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="/style.css">
 
-  <script>
-    try {
-      var t = localStorage.getItem('theme');
-      if (t === 'light' || t === 'dark') {
-        document.documentElement.setAttribute('data-theme', t);
-      }
-    } catch (e) {}
-  </script>
+    <!-- Design overrides (same as index.html) -->
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #ffffff;
+            --accent: #17375E;
+            --accent-dark: #0B1F3A;
+            --text: #1A1A1A;
+            --muted: #4A5568;
+            --rule: #D9DEE5;
+            --link-line: rgba(23, 55, 94, 0.35);
+        }
+        /* Dark mode: follows the device setting unless the visitor picked Light or Dark */
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #0F1620;
+                --accent: #8FB4E8;
+                --accent-dark: #BBD3F5;
+                --text: #E4E8EE;
+                --muted: #9AA5B4;
+                --rule: #2A3441;
+                --link-line: rgba(143, 180, 232, 0.4);
+            }
+        }
+        :root[data-theme="light"] { color-scheme: light; }
+        :root[data-theme="dark"] {
+            color-scheme: dark;
+            --bg: #0F1620;
+            --accent: #8FB4E8;
+            --accent-dark: #BBD3F5;
+            --text: #E4E8EE;
+            --muted: #9AA5B4;
+            --rule: #2A3441;
+            --link-line: rgba(143, 180, 232, 0.4);
+        }
+        /* Theme switch button, upper right corner */
+        .theme-corner {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            z-index: 10;
+        }
+        .theme-toggle {
+            all: unset;
+            box-sizing: border-box;
+            display: block !important;
+            width: 24px !important;
+            height: 24px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            background: none !important;
+            line-height: 0 !important;
+            cursor: pointer;
+            color: var(--accent);
+            -webkit-tap-highlight-color: transparent;
+        }
+        .theme-toggle:hover { opacity: 0.75; }
+        .theme-toggle svg { width: 24px; height: 24px; display: block; }
+        html, body {
+            background: var(--bg) !important;
+            background-image: none !important;
+        }
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 18px;
+            line-height: 1.65;
+            color: var(--text);
+            margin: 0;
+        }
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px 48px;
+            background: var(--bg) !important;
+            position: relative;
+        }
 
-  <link rel="stylesheet" href="/style.css">
+        /* Header */
+        header {
+            background: var(--bg) !important;
+            background-image: none !important;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px 24px;
+            padding: 20px 0 14px;
+            margin: 0;
+            border-bottom: 1px solid var(--rule);
+        }
+        header > a { display: none; }
 
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #ffffff;
-      --accent: #17375E;
-      --accent-dark: #0B1F3A;
-      --text: #1A1A1A;
-      --muted: #4A5568;
-      --rule: #D9DEE5;
-      --link-line: rgba(23, 55, 94, 0.35);
-    }
+        nav {
+            order: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 28px;
+            background: none !important;
+        }
+        nav a,
+        nav a:visited {
+            text-decoration: none;
+            color: var(--accent) !important;
+        }
+        .navcloud {
+            background: none !important;
+            box-shadow: none !important;
+            border-radius: 0;
+            padding: 6px 0;
+            font-size: 17px;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+        }
+        nav a:hover .navcloud { border-bottom-color: var(--accent); }
 
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #0F1620;
-        --accent: #8FB4E8;
-        --accent-dark: #BBD3F5;
-        --text: #E4E8EE;
-        --muted: #9AA5B4;
-        --rule: #2A3441;
-        --link-line: rgba(143, 180, 232, 0.4);
-      }
-    }
+        .header-icons { order: 2; background: none !important; }
+        .social {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .social li { margin: 0; padding: 0; }
+        .icon-small { width: 24px; height: 24px; display: block; }
+        .social a:hover { opacity: 0.75; }
 
-    :root[data-theme="light"] {
-      color-scheme: light;
-    }
+        /* Notes content */
+        .notes {
+            padding: 64px 0 0;
+        }
+        .notes .updated {
+            margin: 0 0 32px;
+            color: var(--muted);
+        }
+        .notes h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2.4rem;
+            line-height: 1.2;
+            font-weight: 500;
+            color: var(--accent);
+            text-align: left;
+            margin: 0 0 24px;
+        }
+        .notes h1.next { margin-top: 40px; }
+        .notes hr.section-divider {
+            border: 0;
+            border-top: 1px solid var(--rule);
+            height: 0;
+            width: 100% !important;
+            max-width: none !important;
+            margin: 40px 0 0 !important;
+            padding: 0;
+            background: none !important;
+        }
+        .notes h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.4rem;
+            line-height: 1.25;
+            font-weight: 500;
+            color: var(--accent) !important;
+            margin: 0 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--rule);
+        }
+        .notes ul + h2 { margin-top: 32px; }
+        .notes ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+        .notes li {
+            margin: 0 0 10px;
+        }
+        .notes a {
+            color: var(--accent);
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-color: var(--link-line);
+            text-underline-offset: 3px;
+        }
+        .notes a:hover {
+            color: var(--accent-dark);
+            text-decoration-color: var(--accent-dark);
+        }
 
-    :root[data-theme="dark"] {
-      color-scheme: dark;
-      --bg: #0F1620;
-      --accent: #8FB4E8;
-      --accent-dark: #BBD3F5;
-      --text: #E4E8EE;
-      --muted: #9AA5B4;
-      --rule: #2A3441;
-      --link-line: rgba(143, 180, 232, 0.4);
-    }
-
-    html, body {
-      background: var(--bg) !important;
-      background-image: none !important;
-    }
-
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-      line-height: 1.65;
-      color: var(--text);
-      margin: 0;
-    }
-
-    .main-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 24px 48px;
-      background: var(--bg) !important;
-      position: relative;
-    }
-
-    /* Theme switch */
-    .theme-corner {
-      position: absolute;
-      top: 20px;
-      right: 24px;
-      z-index: 10;
-    }
-
-    .theme-toggle {
-      all: unset;
-      box-sizing: border-box;
-      display: block !important;
-      width: 24px !important;
-      height: 24px !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      border: 0 !important;
-      background: none !important;
-      line-height: 0 !important;
-      cursor: pointer;
-      color: var(--accent);
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .theme-toggle:hover {
-      opacity: 0.75;
-    }
-
-    .theme-toggle svg {
-      width: 24px;
-      height: 24px;
-      display: block;
-    }
-
-    a:focus-visible,
-    .theme-toggle:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 5px;
-    }
-
-    /* Header */
-    header {
-      background: var(--bg) !important;
-      background-image: none !important;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px 24px;
-      padding: 20px 44px 14px 0;
-      margin: 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 28px;
-      background: none !important;
-    }
-
-    nav a,
-    nav a:visited {
-      text-decoration: none;
-      color: var(--accent) !important;
-    }
-
-    .navcloud {
-      display: block;
-      background: none !important;
-      box-shadow: none !important;
-      border-radius: 0;
-      padding: 6px 0;
-      font-size: 17px;
-      font-weight: 500;
-      border-bottom: 2px solid transparent;
-    }
-
-    nav a:hover .navcloud,
-    nav a[aria-current="page"] .navcloud {
-      border-bottom-color: var(--accent);
-    }
-
-    .header-icons {
-      background: none !important;
-    }
-
-    .social {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .social li {
-      margin: 0;
-      padding: 0;
-    }
-
-    .social a {
-      color: var(--accent);
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    .social a:hover {
-      opacity: 0.75;
-    }
-
-    /* Resources content */
-    .resources {
-      padding: 64px 0 0;
-    }
-
-    .resources h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 2.4rem;
-      line-height: 1.2;
-      font-weight: 500;
-      color: var(--accent);
-      text-align: left;
-      margin: 0 0 24px;
-    }
-
-    .resources h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.4rem;
-      line-height: 1.25;
-      font-weight: 500;
-      color: var(--accent) !important;
-      margin: 0 0 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .resources h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--accent);
-      margin: 24px 0 12px;
-    }
-
-    .resources section + section {
-      margin-top: 40px;
-    }
-
-    .resources ul {
-      margin: 0;
-      padding-left: 22px;
-    }
-
-    .resources li {
-      margin: 0 0 10px;
-    }
-
-    .resources a {
-      color: var(--accent);
-      font-weight: 500;
-      text-decoration: underline;
-      text-decoration-color: var(--link-line);
-      text-underline-offset: 3px;
-      overflow-wrap: anywhere;
-    }
-
-    .resources a:hover {
-      color: var(--accent-dark);
-      text-decoration-color: var(--accent-dark);
-    }
-
-    .resources hr.section-divider {
-      border: 0;
-      border-top: 1px solid var(--rule);
-      height: 0;
-      width: 100% !important;
-      max-width: none !important;
-      margin: 40px 0 0 !important;
-      padding: 0;
-      background: none !important;
-    }
-
-    @media (max-width: 720px) {
-      body {
-        font-size: 17px;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .header-icons {
-        order: -1;
-      }
-
-      .resources {
-        padding-top: 60px;
-      }
-
-      .resources h1 {
-        font-size: 2rem;
-      }
-
-      .resources h2 {
-        font-size: 1.25rem;
-      }
-    }
-  </style>
+        @media (max-width: 720px) {
+            body { font-size: 17px; }
+            header { flex-direction: column; align-items: flex-start; }
+            .header-icons { order: 0; }
+            .notes { padding-top: 60px; }
+            .notes h1 { font-size: 2rem; }
+            .notes h2 { font-size: 1.25rem; }
+        }
+    </style>
 </head>
-
 <body>
 <div class="main-content">
-
   <div class="theme-corner">
-    <button
-      type="button"
-      class="theme-toggle"
-      id="theme-toggle"
-      aria-label="Switch theme">
-    </button>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
   </div>
 
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="/index.html">
-        <span class="navcloud"><b>Home</b></span>
-      </a>
-      <a href="/pages/Contact.html">
-        <span class="navcloud"><b>Contact</b></span>
-      </a>
-      <a href="/pages/Research.html">
-        <span class="navcloud"><b>Research</b></span>
-      </a>
-      <a href="/pages/Teaching.html">
-        <span class="navcloud"><b>Teaching</b></span>
-      </a>
-      <a href="/pages/Coursework.html">
-        <span class="navcloud"><b>Notes</b></span>
-      </a>
-      <a href="/pages/resources.html" aria-current="page">
-        <span class="navcloud"><b>Resources</b></span>
-      </a>
-    </nav>
 
-    <div class="header-icons">
-      <ul class="social" aria-label="Social links">
-        <li>
-          <a href="https://scholar.google.com/citations?user=SQrGiDQAAAAJ&amp;hl=en"
-             target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        </li>
-        <li>
-          <a href="https://auburn.academia.edu/SayantaniBhattacharya"
-             target="_blank" rel="noopener noreferrer">Academia.edu</a>
-        </li>
-        <li>
-          <a href="https://github.com/sayantanimath"
-             target="_blank" rel="noopener noreferrer">GitHub</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/sayantani-bhattacharya-aa0437118"
-             target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </li>
-        <li>
-          <a href="mailto:szb0261@auburn.edu">Email</a>
-        </li>
-        <li>
-          <a href="https://ebird.org/profile/ODM3MTI2MA/US"
-             target="_blank" rel="noopener noreferrer">eBird</a>
-        </li>
-      </ul>
-    </div>
-  </header>
+  <div class="notes">
 
-  <main class="resources">
-    <h1>Resources</h1>
-
-    <section aria-labelledby="open-problems">
-      <h2 id="open-problems">Open Problems</h2>
-      <ul>
-        <li><a href="https://www.combinatoricsworkshop.org/problem-garden">GRWC Problem Garden</a></li>
-        <li><a href="http://www.openproblemgarden.org">Open Problem Garden</a></li>
-        <li><a href="https://dwest.web.illinois.edu/openp/">Open Problems: Douglas B. West</a></li>
-        <li><a href="https://topp.openproblem.net">The Open Problems Project</a></li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="conferences">
-      <h2 id="conferences">List of Conferences</h2>
-      <ul>
-        <li><a href="https://dwest.web.illinois.edu/meetlist.html">Douglas B. West's List</a></li>
-        <li><a href="https://www.ams.org/calendar/mathcalendar.pl/">AMS Calendar</a></li>
-        <li><a href="https://aimath.org/workshops/upcoming/">AIM Workshops</a></li>
-        <li><a href="https://icerm.brown.edu/programs/">ICERM Programs</a></li>
-        <li><a href="https://www.slmath.org/workshops">SLMath Workshops</a></li>
-        <li><a href="https://users.renyi.hu/~pach/conferences.html">Rényi Institute</a></li>
-        <li><a href="https://conference-service.com/conferences/graph-theory.html">Conferences in Graph Theory</a></li>
-        <li><a href="https://www.mi.fu-berlin.de/en/math/groups/geokomb/Events/index.html/">FU Berlin</a></li>
-        <li><a href="https://erdoscenter.renyi.hu/events/">Erdős Center</a></li>
-        <li>
-          <a href="http://www.maths.lse.ac.uk/Personal/jan/conferences.html"
-             target="_blank" rel="noopener noreferrer">LSE UK List</a>
-        </li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="undergraduate">
-      <h2 id="undergraduate">Undergraduate Resources</h2>
-      <ul>
-        <li><a href="https://www.shawnahaider.com/activities">Shawna Haider's Activities</a></li>
-        <li><a href="https://library.tbil.org/2024/calculus/instructor/LT.html">Team Based Inquiry Learning</a></li>
-        <li><a href="https://activecalculus.org">Active Calculus</a></li>
-        <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
-        <li><a href="https://www.hippocampus.org/HippoCampus/">HippoCampus</a></li>
-        <li><a href="https://artofproblemsolving.com/wiki/index.php/Resources_for_mathematics_competitions?srsltid=AfmBOoqZIsjJE0dCjm2zG5P_WcKN0EQXt-n3eU_NKD9GvvN858d9oxZx#Free_Math_Books">Art of Problem Solving</a></li>
-        <li><a href="https://www.cut-the-knot.org">Cut-the-Knot</a></li>
-        <li><a href="https://www.ams.org/learning-careers/students/undergraduate">AMS Resources</a></li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="general">
-      <h2 id="general">General Resources</h2>
-
-      <h3>LaTeX</h3>
-      <ul>
-        <li><a href="https://www.integral-domain.org/lwilliams/Resources/tikzsnippets.php">Dr. Williams's TikZ Gallery</a></li>
-        <li><a href="https://texample.net/tikz-book-jp/">TikZ Examples from TEXample.net</a></li>
-        <li><a href="https://tikzcd.yichuanshen.de">TikZ Editor for Commutative Diagrams</a></li>
-        <li><a href="/pages/tikz.tex">My TikZ Code Compilation.tex</a></li>
-      </ul>
-
-      <h3>Classroom Resources</h3>
-      <ul>
-        <li><a href="https://www.polleverywhere.com/home">Poll Everywhere</a></li>
-        <li><a href="https://admin.sli.do/events">Slido</a></li>
-        <li><a href="https://padlet.com/dashboard">Padlet</a></li>
-        <li><a href="https://whenisgood.net">When is Good?</a></li>
-        <li><a href="https://nearpod.com">Nearpod</a></li>
-        <li><a href="https://www.iclicker.com">iClicker</a></li>
-      </ul>
-    </section>
+    <h1>Open Problems</h1>
+    <ul>
+      <li><a href="https://www.combinatoricsworkshop.org/problem-garden">GRWC Problem Garden</a></li>
+      <li><a href="http://www.openproblemgarden.org">Open Problem Garden</a></li>
+      <li><a href="https://dwest.web.illinois.edu/openp/">Open Problems: Douglas B. West</a></li>
+      <li><a href="https://topp.openproblem.net">The Open Problems Project</a></li>
+    </ul>
 
     <hr class="section-divider">
-  </main>
-</div>
 
+    <h1 class="next">List of Conferences</h1>
+    <ul>
+      <li><a href="https://dwest.web.illinois.edu/meetlist.html">Douglas B. West's List</a></li>
+      <li><a href="https://www.ams.org/calendar/mathcalendar.pl/">AMS Calendar</a></li>
+      <li><a href="https://aimath.org/workshops/upcoming/">AIM Workshops</a></li>
+      <li><a href="https://icerm.brown.edu/programs/">ICERM Programs</a></li>
+      <li><a href="https://www.slmath.org/workshops">SLMath Workshops</a></li>
+      <li><a href="https://users.renyi.hu/~pach/conferences.html">Rényi Institute</a></li>
+      <li><a href="https://conference-service.com/conferences/graph-theory.html">Conferences in Graph Theory</a></li>
+      <li><a href="https://www.mi.fu-berlin.de/en/math/groups/geokomb/Events/index.html/">FU Berlin</a></li>
+      <li><a href="https://erdoscenter.renyi.hu/events/">Erdős Center</a></li>
+      <li><a href="http://www.maths.lse.ac.uk/Personal/jan/conferences.html">LSE UK List</a></li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h1 class="next">Undergraduate Resources</h1>
+    <ul>
+      <li><a href="https://www.shawnahaider.com/activities">Shawna Haider's Activities</a></li>
+      <li><a href="https://library.tbil.org/2024/calculus/instructor/LT.html">Team Based Inquiry Learning</a></li>
+      <li><a href="https://activecalculus.org">Active Calculus</a></li>
+      <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
+      <li><a href="https://www.hippocampus.org/HippoCampus/">HippoCampus</a></li>
+      <li><a href="https://artofproblemsolving.com/wiki/index.php/Resources_for_mathematics_competitions#Free_Math_Books">Art of Problem Solving</a></li>
+      <li><a href="https://www.cut-the-knot.org">Cut-the-Knot</a></li>
+      <li><a href="https://www.ams.org/learning-careers/students/undergraduate">AMS Resources</a></li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h1 class="next">General Resources</h1>
+    <h2>LaTeX</h2>
+    <ul>
+      <li><a href="https://www.integral-domain.org/lwilliams/Resources/tikzsnippets.php">Dr. Williams's TikZ Gallery</a></li>
+      <li><a href="https://texample.net/tikz-book-jp/">TikZ Examples from TEXample.net</a></li>
+      <li><a href="https://tikzcd.yichuanshen.de">TikZ Editor for Commutative Diagrams</a></li>
+      <li><a href="/pages/tikz.tex">My TikZ Code Compilation.tex</a></li>
+    </ul>
+
+    <h2>Classroom Resources</h2>
+    <ul>
+      <li><a href="https://www.polleverywhere.com/home">Poll Everywhere</a></li>
+      <li><a href="https://admin.sli.do/events">Slido</a></li>
+      <li><a href="https://padlet.com/dashboard">Padlet</a></li>
+      <li><a href="https://whenisgood.net">When is Good?</a></li>
+      <li><a href="https://nearpod.com">Nearpod</a></li>
+      <li><a href="https://www.iclicker.com">iClicker</a></li>
+    </ul>
+
+    <hr class="section-divider">
+  </div>
+</div>
 <script>
 (function () {
   var btn = document.getElementById('theme-toggle');
   var root = document.documentElement;
   var order = ['auto', 'light', 'dark'];
-
-  var labels = {
-    auto: 'Theme: match device (click to change)',
-    light: 'Theme: light (click to change)',
-    dark: 'Theme: dark (click to change)'
-  };
-
+  var labels = { auto: 'Theme: match device (click to change)', light: 'Theme: light (click to change)', dark: 'Theme: dark (click to change)' };
   var icons = {
-    auto: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>',
-    light: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></svg>',
-    dark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>'
+    auto: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>',
+    light: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></svg>',
+    dark: '<svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>'
   };
 
-  var mode = 'auto';
-
-  try {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'light' || saved === 'dark') {
-      mode = saved;
-    }
-  } catch (e) {}
-
-  function apply(value) {
-    mode = value;
-
-    if (mode === 'auto') {
-      root.removeAttribute('data-theme');
-    } else {
-      root.setAttribute('data-theme', mode);
-    }
-
+  function current() {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    return (t === 'light' || t === 'dark') ? t : 'auto';
+  }
+  function apply(mode) {
+    if (mode === 'auto') root.removeAttribute('data-theme');
+    else root.setAttribute('data-theme', mode);
     btn.innerHTML = icons[mode];
     btn.title = labels[mode];
     btn.setAttribute('aria-label', labels[mode]);
   }
-
   btn.addEventListener('click', function () {
-    var next = order[(order.indexOf(mode) + 1) % order.length];
-
+    var next = order[(order.indexOf(current()) + 1) % order.length];
     try {
-      if (next === 'auto') {
-        localStorage.removeItem('theme');
-      } else {
-        localStorage.setItem('theme', next);
-      }
+      if (next === 'auto') localStorage.removeItem('theme');
+      else localStorage.setItem('theme', next);
     } catch (e) {}
-
     apply(next);
   });
-
-  apply(mode);
+  apply(current());
 })();
 </script>
 </body>
