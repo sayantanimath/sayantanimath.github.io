@@ -1,251 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <script>
-    	MathJax = {
-        	tex: {
-            		inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-           		displayMath: [ ['\\[', '\\]'] ]
-        	},
-        	svg: {
-            		fontCache: 'global'
-        	}
-    	};
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-	    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-    </script>	
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Sayantani Bhattacharya</title>
+  <link rel="icon" href="/IMG_1657.png" type="image/png">
+
+  <script>
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    } catch (e) {}
+  </script>
+
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --accent: #17375E;
+      --accent-dark: #0B1F3A;
+      --text: #1A1A1A;
+      --muted: #4A5568;
+      --rule: #D9DEE5;
+      --link-line: rgba(23, 55, 94, 0.35);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0F1620;
+        --accent: #8FB4E8;
+        --accent-dark: #BBD3F5;
+        --text: #E4E8EE;
+        --muted: #9AA5B4;
+        --rule: #2A3441;
+        --link-line: rgba(143, 180, 232, 0.4);
+      }
+    }
+
+    :root[data-theme="light"] {
+      color-scheme: light;
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0F1620;
+      --accent: #8FB4E8;
+      --accent-dark: #BBD3F5;
+      --text: #E4E8EE;
+      --muted: #9AA5B4;
+      --rule: #2A3441;
+      --link-line: rgba(143, 180, 232, 0.4);
+    }
+
+    html, body {
+      background: var(--bg) !important;
+      background-image: none !important;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .main-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      background: var(--bg) !important;
+      position: relative;
+    }
+
+    /* Theme switch */
+    .theme-corner {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      z-index: 10;
+    }
+
+    .theme-toggle {
+      all: unset;
+      box-sizing: border-box;
+      display: block !important;
+      width: 24px !important;
+      height: 24px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      background: none !important;
+      line-height: 0 !important;
+      cursor: pointer;
+      color: var(--accent);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .theme-toggle:hover {
+      opacity: 0.75;
+    }
+
+    .theme-toggle svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    a:focus-visible,
+    .theme-toggle:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 5px;
+    }
+
+    /* Header */
+    header {
+      background: var(--bg) !important;
+      background-image: none !important;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+      padding: 20px 44px 14px 0;
+      margin: 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 28px;
+      background: none !important;
+    }
+
+    nav a,
+    nav a:visited {
+      text-decoration: none;
+      color: var(--accent) !important;
+    }
+
+    .navcloud {
+      display: block;
+      background: none !important;
+      box-shadow: none !important;
+      border-radius: 0;
+      padding: 6px 0;
+      font-size: 17px;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover .navcloud,
+    nav a[aria-current="page"] .navcloud {
+      border-bottom-color: var(--accent);
+    }
+
+    .header-icons {
+      background: none !important;
+    }
+
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .social li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .social a {
+      color: var(--accent);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .social a:hover {
+      opacity: 0.75;
+    }
+
+    /* Resources content */
+    .resources {
+      padding: 64px 0 0;
+    }
+
+    .resources h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      font-weight: 500;
+      color: var(--accent);
+      text-align: left;
+      margin: 0 0 24px;
+    }
+
+    .resources h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      line-height: 1.25;
+      font-weight: 500;
+      color: var(--accent) !important;
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .resources h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin: 24px 0 12px;
+    }
+
+    .resources section + section {
+      margin-top: 40px;
+    }
+
+    .resources ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .resources li {
+      margin: 0 0 10px;
+    }
+
+    .resources a {
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-color: var(--link-line);
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .resources a:hover {
+      color: var(--accent-dark);
+      text-decoration-color: var(--accent-dark);
+    }
+
+    .resources hr.section-divider {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      height: 0;
+      width: 100% !important;
+      max-width: none !important;
+      margin: 40px 0 0 !important;
+      padding: 0;
+      background: none !important;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 17px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-icons {
+        order: -1;
+      }
+
+      .resources {
+        padding-top: 60px;
+      }
+
+      .resources h1 {
+        font-size: 2rem;
+      }
+
+      .resources h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-	 <div class="main-content">
-   <header>
-    <!-- Optional: Favicon or logo -->
-    <a href="/index.html" align="left">
-        <!-- <img src="/MyFavicon.png" alt="Favicon" class="favicon"> -->
-    </a>
+<div class="main-content">
 
+  <div class="theme-corner">
+    <button
+      type="button"
+      class="theme-toggle"
+      id="theme-toggle"
+      aria-label="Switch theme">
+    </button>
+  </div>
 
-    <!-- Top Right Icons + Clock -->
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="/index.html">
+        <span class="navcloud"><b>Home</b></span>
+      </a>
+      <a href="/pages/Contact.html">
+        <span class="navcloud"><b>Contact</b></span>
+      </a>
+      <a href="/pages/Research.html">
+        <span class="navcloud"><b>Research</b></span>
+      </a>
+      <a href="/pages/Teaching.html">
+        <span class="navcloud"><b>Teaching</b></span>
+      </a>
+      <a href="/pages/Coursework.html">
+        <span class="navcloud"><b>Notes</b></span>
+      </a>
+      <a href="/pages/resources.html" aria-current="page">
+        <span class="navcloud"><b>Resources</b></span>
+      </a>
+    </nav>
+
     <div class="header-icons">
-        <ul class="list-inline social">
-		<li>
-    <a title="Google Scholar" href="https://scholar.google.com/citations?user=SQrGiDQAAAAJ&hl=en" target="_blank">
-        <svg class="icon-small" viewBox="0 0 24 24" fill="none">
-            <!-- Scholar cap -->
-            <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z"
-                  fill="#4285F4"/>
-
-            <!-- Book/base -->
-            <path d="M6 13.5V17.5C6 18.9 8.7 20 12 20C15.3 20 18 18.9 18 17.5V13.5L12 17L6 13.5Z"
-                  fill="#4285F4"/>
-        </svg>
-    </a>
-</li>
-			 <li>
-    <a title="Academia.edu" href="https://auburn.academia.edu/SayantaniBhattacharya" target="_blank">
-        <svg class="icon-small" viewBox="0 0 24 24" fill="none">
-            <!-- White circular background -->
-            <circle cx="12" cy="12" r="12" fill="#ffffff"/>
-
-            <!-- Black Academia A -->
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M19.5 18.5H15.2V17.9C15.9 17.9 16.3 17.7 16.3 17.3
-                C16.3 17.1 16.2 16.9 16.1 16.6L15.6 15.4H10.3
-                C10 16.1 9.8 16.7 9.7 16.8
-                C9.4 17.6 9.8 17.7 10.6 17.8H10.6V18.5H6V17.9
-                C6.4 17.8 6.7 17.7 6.9 17.3L11.3 6.5L10.7 5H14.4
-                L19 17.3C19.1 17.5 19.2 17.7 19.4 17.8
-                C19.5 17.9 19.7 17.9 19.9 17.9V18.5H19.5ZM15.3 13.8
-                L13.3 8.7C13 9.6 12.1 11.8 11.3 13.8H15.3Z"
-                fill="#000000"/>
-        </svg>
-    </a>
-</li>
-    
-		<li>
-    <a title="GitHub" href="https://github.com/sayantanimath" target="_blank">
-        <svg class="icon-small" viewBox="0 0 24 24">
-            <!-- White circle background -->
-            <circle cx="12" cy="12" r="12" fill="#ffffff"/>
-
-            <!-- Black GitHub cat -->
-            <path fill="#000000" d="M12 2C6.48 2 2 6.48 2 12
-            c0 4.42 2.87 8.17 6.84 9.49
-            c.5.09.66-.22.66-.48
-            c0-.24-.01-1.04-.01-1.89
-            c-2.78.6-3.37-1.18-3.37-1.18
-            c-.45-1.15-1.11-1.46-1.11-1.46
-            c-.91-.62.07-.61.07-.61
-            c1 .07 1.53 1.03 1.53 1.03
-            c.9 1.53 2.34 1.09 2.91.83
-            c.09-.65.35-1.09.63-1.34
-            c-2.22-.25-4.56-1.11-4.56-4.92
-            c0-1.09.39-1.98 1.03-2.68
-            c-.1-.25-.45-1.27.1-2.64
-            c0 0 .84-.27 2.75 1.02
-            c.8-.22 1.65-.33 2.5-.34
-            c.85.01 1.7.12 2.5.34
-            c1.9-1.29 2.74-1.02 2.74-1.02
-            c.55 1.37.2 2.39.1 2.64
-            c.64.7 1.03 1.59 1.03 2.68
-            c0 3.82-2.34 4.66-4.57 4.91
-            c.36.31.68.92.68 1.85
-            c0 1.34-.01 2.41-.01 2.74
-            c0 .27.18.58.67.48
-            A10.02 10.02 0 0022 12
-            C22 6.48 17.52 2 12 2z"/>
-        </svg>
-    </a>
-</li>
-            
-            <li>
-    <a title="LinkedIn" href="https://www.linkedin.com/in/sayantani-bhattacharya-aa0437118" target="_blank">
-        <svg class="icon-small" viewBox="0 0 24 24">
-            <!-- Dark blue background -->
-            <rect x="1" y="1" width="22" height="22" rx="4"
-                  fill="#0A66C2"/>
-
-            <!-- White LinkedIn logo -->
-            <path fill="#ffffff"
-                  d="M8.34 18.34H5.66V9.75h2.68v8.59zM7 8.57
-                  c-.86 0-1.56-.71-1.56-1.57
-                  c0-.87.7-1.57 1.56-1.57
-                  c.86 0 1.56.7 1.56 1.57
-                  c0 .86-.7 1.57-1.56 1.57zM18.34 18.34h-2.67v-4.18
-                  c0-1-.02-2.29-1.39-2.29
-                  c-1.39 0-1.6 1.09-1.6 2.22v4.25H10V9.75h2.56v1.17h.04
-                  c.36-.67 1.23-1.39 2.53-1.39
-                  c2.71 0 3.21 1.78 3.21 4.09v4.72z"/>
-        </svg>
-    </a>
-</li>
-
-			<li>
-		<a title="Outlook Email" href="mailto:szb0261@auburn.edu" target="_blank">
-        <svg class="icon-small" viewBox="0 0 24 24" fill="none">
-            <!-- Outlook back panel -->
-            <path d="M9 4H20C20.55 4 21 4.45 21 5V19C21 19.55 20.55 20 20 20H9V4Z"
-                  fill="#0078D4"/>
-
-            <!-- Envelope -->
-            <path d="M10 8L15 12L20 8V9.5L15 13.5L10 9.5V8Z"
-                  fill="#ffffff"/>
-
-            <!-- Front Outlook square -->
-            <rect x="3" y="6" width="10" height="12" rx="1"
-                  fill="#005A9E"/>
-
-            <!-- White O -->
-            <path d="M8 9.2C6.34 9.2 5.2 10.42 5.2 12C5.2 13.58 6.34 14.8 8 14.8C9.66 14.8 10.8 13.58 10.8 12C10.8 10.42 9.66 9.2 8 9.2ZM8 13.7C7.01 13.7 6.4 12.95 6.4 12C6.4 11.05 7.01 10.3 8 10.3C8.99 10.3 9.6 11.05 9.6 12C9.6 12.95 8.99 13.7 8 13.7Z"
-                  fill="#ffffff"/>
-        </svg>
-    </a>
-</li>
-			<li>
-    <a title="eBird" href="https://ebird.org/profile/ODM3MTI2MA/US" target="_blank">
-        <svg class="icon-small" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="11" fill="#78BE20"/>
-            <path d="M16.8 12.7H9.2C9.5 14.6 10.9 15.6 12.8 15.6C14 15.6 15 15.2 15.8 14.5L16.4 15.3C15.5 16.2 14.2 16.8 12.7 16.8C9.9 16.8 8 14.9 8 12C8 9.2 9.9 7.2 12.5 7.2C15 7.2 16.8 9 16.8 11.9C16.8 12.2 16.8 12.5 16.8 12.7ZM9.2 11.6H15.5C15.3 9.8 14.1 8.5 12.5 8.5C10.9 8.5 9.5 9.7 9.2 11.6Z"
-                  fill="white"/>
-        </svg>
-    </a>
-</li>
-        </ul>
+      <ul class="social" aria-label="Social links">
+        <li>
+          <a href="https://scholar.google.com/citations?user=SQrGiDQAAAAJ&amp;hl=en"
+             target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        </li>
+        <li>
+          <a href="https://auburn.academia.edu/SayantaniBhattacharya"
+             target="_blank" rel="noopener noreferrer">Academia.edu</a>
+        </li>
+        <li>
+          <a href="https://github.com/sayantanimath"
+             target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/sayantani-bhattacharya-aa0437118"
+             target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li>
+          <a href="mailto:szb0261@auburn.edu">Email</a>
+        </li>
+        <li>
+          <a href="https://ebird.org/profile/ODM3MTI2MA/US"
+             target="_blank" rel="noopener noreferrer">eBird</a>
+        </li>
+      </ul>
     </div>
+  </header>
 
-    <!-- Navigation -->
-<!--div class="topnav">
-  <a class="active" href="/pages/Contact.html">Contact</a>
-  <a href="/pages/Teaching.html">Teaching</a>
-  <a href="/pages/Research.html">Research</a>
-  <a href="/pages/Coursework.html">Notes</a>
- <a href="/pages/resources.html">Resources</a>
-   </div-->
-	<nav>
-		<a href="/index.html" style="color: #2A6BB2"><div class="navcloud"><b>Home</b></div></a>
-        <a href="/pages/Contact.html" style="color: #2A6BB2"><div class="navcloud"><b>Contact</b></div></a>
-		<a href="/pages/Research.html" style="color: #2A6BB2"><div class="navcloud"><b>Research</b></div></a>
-        <a href="/pages/Teaching.html" style="color: #2A6BB2"><div class="navcloud"><b>Teaching</b></div></a>
-        <a href="/pages/Coursework.html" style="color: #2A6BB2"><div class="navcloud"><b>Notes</b></div></a>
-        <a href="/pages/resources.html" style="color: #2A6BB2"><div class="navcloud"><b>Resources</b></div></a>
-   </nav>   
-   
-</header>
-    <br>
-    <!-- Contact Section with Two Columns -->
-  
- <h2 style="color:#65A2E6;">Open Problems</h2>
-		 <ul>
-			 <li><a href="https://www.combinatoricsworkshop.org/problem-garden">GRWC Problem Garden</a></li>
-                <li><a href="http://www.openproblemgarden.org">Open Problem Garden</a></li>
-                <li><a href="https://dwest.web.illinois.edu/openp/">Open Problems : Douglas B. West</a></li>
-                <li><a href="https://topp.openproblem.net">The Open Problems Project</a></li>
-		 </ul>
-    <br>
+  <main class="resources">
+    <h1>Resources</h1>
 
-    <h2 style="color:#65A2E6;">List of Conferences</h2>
-     <ul>
-    <li><a href="https://dwest.web.illinois.edu/meetlist.html">Douglas.B.West's List</a></li>
-            <li><a href="https://www.ams.org/calendar/mathcalendar.pl/">AMS Calender</a></li>
-            <li><a href="https://aimath.org/workshops/upcoming/">AIM Workshops</a></li>
-            <li><a href="https://icerm.brown.edu/programs/">ICERM Programs</a></li>
-            <li><a href="https://www.slmath.org/workshops">SLMath Workshops</a></li>
-        <li><a href="https://users.renyi.hu/~pach/conferences.html">Renyi Institute</a></li>
+    <section aria-labelledby="open-problems">
+      <h2 id="open-problems">Open Problems</h2>
+      <ul>
+        <li><a href="https://www.combinatoricsworkshop.org/problem-garden">GRWC Problem Garden</a></li>
+        <li><a href="http://www.openproblemgarden.org">Open Problem Garden</a></li>
+        <li><a href="https://dwest.web.illinois.edu/openp/">Open Problems: Douglas B. West</a></li>
+        <li><a href="https://topp.openproblem.net">The Open Problems Project</a></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="conferences">
+      <h2 id="conferences">List of Conferences</h2>
+      <ul>
+        <li><a href="https://dwest.web.illinois.edu/meetlist.html">Douglas B. West's List</a></li>
+        <li><a href="https://www.ams.org/calendar/mathcalendar.pl/">AMS Calendar</a></li>
+        <li><a href="https://aimath.org/workshops/upcoming/">AIM Workshops</a></li>
+        <li><a href="https://icerm.brown.edu/programs/">ICERM Programs</a></li>
+        <li><a href="https://www.slmath.org/workshops">SLMath Workshops</a></li>
+        <li><a href="https://users.renyi.hu/~pach/conferences.html">Rényi Institute</a></li>
         <li><a href="https://conference-service.com/conferences/graph-theory.html">Conferences in Graph Theory</a></li>
         <li><a href="https://www.mi.fu-berlin.de/en/math/groups/geokomb/Events/index.html/">FU Berlin</a></li>
         <li><a href="https://erdoscenter.renyi.hu/events/">Erdős Center</a></li>
-        <li><a href="http://www.maths.lse.ac.uk/Personal/jan/conferences.html" target="_blank" rel="noopener noreferrer">LSE UK List</a></li>
-            
+        <li>
+          <a href="http://www.maths.lse.ac.uk/Personal/jan/conferences.html"
+             target="_blank" rel="noopener noreferrer">LSE UK List</a>
+        </li>
+      </ul>
+    </section>
 
-	 </ul>
+    <section aria-labelledby="undergraduate">
+      <h2 id="undergraduate">Undergraduate Resources</h2>
+      <ul>
+        <li><a href="https://www.shawnahaider.com/activities">Shawna Haider's Activities</a></li>
+        <li><a href="https://library.tbil.org/2024/calculus/instructor/LT.html">Team Based Inquiry Learning</a></li>
+        <li><a href="https://activecalculus.org">Active Calculus</a></li>
+        <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
+        <li><a href="https://www.hippocampus.org/HippoCampus/">HippoCampus</a></li>
+        <li><a href="https://artofproblemsolving.com/wiki/index.php/Resources_for_mathematics_competitions?srsltid=AfmBOoqZIsjJE0dCjm2zG5P_WcKN0EQXt-n3eU_NKD9GvvN858d9oxZx#Free_Math_Books">Art of Problem Solving</a></li>
+        <li><a href="https://www.cut-the-knot.org">Cut-the-Knot</a></li>
+        <li><a href="https://www.ams.org/learning-careers/students/undergraduate">AMS Resources</a></li>
+      </ul>
+    </section>
 
+    <section aria-labelledby="general">
+      <h2 id="general">General Resources</h2>
 
-    
+      <h3>LaTeX</h3>
+      <ul>
+        <li><a href="https://www.integral-domain.org/lwilliams/Resources/tikzsnippets.php">Dr. Williams's TikZ Gallery</a></li>
+        <li><a href="https://texample.net/tikz-book-jp/">TikZ Examples from TEXample.net</a></li>
+        <li><a href="https://tikzcd.yichuanshen.de">TikZ Editor for Commutative Diagrams</a></li>
+        <li><a href="/pages/tikz.tex">My TikZ Code Compilation.tex</a></li>
+      </ul>
 
-    <br>
+      <h3>Classroom Resources</h3>
+      <ul>
+        <li><a href="https://www.polleverywhere.com/home">Poll Everywhere</a></li>
+        <li><a href="https://admin.sli.do/events">Slido</a></li>
+        <li><a href="https://padlet.com/dashboard">Padlet</a></li>
+        <li><a href="https://whenisgood.net">When is Good?</a></li>
+        <li><a href="https://nearpod.com">Nearpod</a></li>
+        <li><a href="https://www.iclicker.com">iClicker</a></li>
+      </ul>
+    </section>
 
-    <!-- Spring 2025 Section -->
-    
-        <h2 style="color:#65A2E6;">Undergraduate Resources</h2>
-        <ul>
-                <li><a href="https://www.shawnahaider.com/activities">Shawna Haider's Activity</a></li>
-                <li><a href="https://library.tbil.org/2024/calculus/instructor/LT.html">Team Based Enquiry Learning</a></li>
-                <li><a href="https://activecalculus.org">Active Calculus</a></li>
-                <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
-                <li><a href="https://www.hippocampus.org/HippoCampus/">Hippo Campus</a></li>
-                 <li><a href="https://artofproblemsolving.com/wiki/index.php/Resources_for_mathematics_competitions?srsltid=AfmBOoqZIsjJE0dCjm2zG5P_WcKN0EQXt-n3eU_NKD9GvvN858d9oxZx#Free_Math_Books">Art of Problem Solving</a></li>
-                 <li><a href="https://www.cut-the-knot.org">Cut-the-Knot</a></li>
-                 <li><a href="https://www.ams.org/learning-careers/students/undergraduate">AMS resources</a></li>
-		</ul>
+    <hr class="section-divider">
+  </main>
+</div>
 
-    <br>
-    
-        <h2 style="color:#65A2E6;">General Resources</h2>
+<script>
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  var order = ['auto', 'light', 'dark'];
 
-<ul>
-             <h3><strong>Latex</strong></h3>
-                <li><a href="https://www.integral-domain.org/lwilliams/Resources/tikzsnippets.php">Dr William's TikZ Gallery</a></li>
-                <li><a href="https://texample.net/tikz-book-jp/">TikZ Example from TEXample.net</a></li>
-                <li><a href="https://tikzcd.yichuanshen.de">TikZ Editor for Commutative Diagrams</a></li>
-                <li><a href="/pages/tikz.tex">My TikZ Code Compilation.tex</a></li>
-            
-</ul><ul>
-    
-        <h3><strong>Classroom Resources</strong></h3>
-                <li><a href="https://www.polleverywhere.com/home">Pole Everywhere</a></li>
-                <li><a href="https://admin.sli.do/events">Slido</a></li>
-                <li><a href="https://padlet.com/dashboard">Padlet</a></li>
-                <li><a href="https://whenisgood.net">When is Good?</a></li>
-                <li><a href="https://nearpod.com">Nearpod</a></li>
-                <li><a href="https://www.iclicker.com">iClicker</a></li>
-</ul>
-             
- 
- </div>
+  var labels = {
+    auto: 'Theme: match device (click to change)',
+    light: 'Theme: light (click to change)',
+    dark: 'Theme: dark (click to change)'
+  };
+
+  var icons = {
+    auto: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>',
+    light: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></g></svg>',
+    dark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="currentColor"/></svg>'
+  };
+
+  var mode = 'auto';
+
+  try {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light' || saved === 'dark') {
+      mode = saved;
+    }
+  } catch (e) {}
+
+  function apply(value) {
+    mode = value;
+
+    if (mode === 'auto') {
+      root.removeAttribute('data-theme');
+    } else {
+      root.setAttribute('data-theme', mode);
+    }
+
+    btn.innerHTML = icons[mode];
+    btn.title = labels[mode];
+    btn.setAttribute('aria-label', labels[mode]);
+  }
+
+  btn.addEventListener('click', function () {
+    var next = order[(order.indexOf(mode) + 1) % order.length];
+
+    try {
+      if (next === 'auto') {
+        localStorage.removeItem('theme');
+      } else {
+        localStorage.setItem('theme', next);
+      }
+    } catch (e) {}
+
+    apply(next);
+  });
+
+  apply(mode);
+})();
+</script>
 </body>
-    
 </html>
