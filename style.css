@@ -329,10 +329,10 @@ nav a { display: flex; align-items: center; line-height: 1; }
     header {
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 18px;   /* space between icon row and nav row */
         padding-top: 16px;
     }
-    .header-icons { order: 0; top: 15px; }
+    .header-icons { order: 0; top: 0; }
     nav { gap: 0 18px; flex-wrap: nowrap; }
     .navcloud { font-size: 17px; }
 
@@ -371,7 +371,7 @@ nav a { display: flex; align-items: center; line-height: 1; }
 
 /* ---------- Phones ---------- */
 @media (max-width: 700px) {
-    .header-icons { top: 10px; right: 10px; }
+    .header-icons { right: 10px; }
 }
 @media (max-width: 500px) {
     .floating-body { text-align: center; }
